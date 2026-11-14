@@ -1,0 +1,53 @@
+partij: ssw
+kabinet: merz
+thema: bestuur
+status: onderzoek
+statusVoorstel: geenakkoord
+titel: Schutz der Minderheiten ins Grundgesetz
+samenvatting: >-
+  Nicht im Koalitionsvertrag. Das Bundesinnenministerium hat im März 2026 entschieden, keine Grundgesetzänderung vorzubereiten.
+citaat: "Wir wollen eine Aufnahme des Schutzes und der Förderung der Minderheiten ins Grundgesetz."
+programma:
+  pagina: 6
+  hoofdstuk: "Gute Minderheitenpolitik ist Friedenspolitik"
+criterium: >-
+  Umgesetzt, wenn das Grundgesetz eine Bestimmung zum Schutz oder zur Anerkennung der nationalen Minderheiten erhält.
+  In Arbeit, wenn ein Gesetzentwurf vorliegt.
+akkoord:
+  oordeel: nee
+  citaat: "Wir bekennen uns zu Schutz und Förderung der in Deutschland lebenden nationalen Minderheiten."
+  zeile: "2741"
+  pagina: 85
+toelichting: >-
+  Der Koalitionsvertrag bekennt sich zum Schutz der nationalen Minderheiten, sieht aber keine Änderung des
+  Grundgesetzes vor. Der Bundesrat forderte am 26. September 2025 in einer Entschließung, die Minderheiten ins
+  Grundgesetz aufzunehmen. Das Bundesinnenministerium entschied am 19. März 2026, „keine Grundgesetzänderung …
+  vorzubereiten“. Ein Gesetzentwurf im Bundestag wurde nicht gefunden.
+kern: true
+kernReden: Nr. 1 der ersten zehn prüfbaren Versprechen aus Vorspann und Kapitelanfängen, S. 6.
+ebene: bund
+bronnen:
+  - soort: programma
+    titel: "Deine Stimme für den Norden. Wahlprogramm des SSW, S. 6"
+    url: https://ssw.de/fileadmin/user_upload/daten/aktuelles/2025/BTW25/SSW-Wahlprogramm_BTW_2025.pdf
+    datum: ''
+    geraadpleegd: 2026-11-14
+  - soort: akkoord
+    titel: "Koalitionsvertrag „Verantwortung für Deutschland“, Zeile 2741"
+    url: https://www.cdu.de/app/uploads/2025/04/Koalitionsvertrag-%E2%80%93-barrierefreie-Version.pdf
+    datum: ''
+    geraadpleegd: 2026-11-14
+  - soort: drucksache
+    titel: "Antwort der Bundesregierung, Drucksache 21/3160"
+    url: https://dserver.bundestag.de/btd/21/031/2103160.pdf
+    datum: 2025-12-05
+    geraadpleegd: 2026-11-14
+    bewijs: indirect
+    citaat: "Die Meinungsbildung hierzu ist innerhalb der Bundesregierung noch nicht abgeschlossen."
+  - soort: bundesrat
+    titel: "Unterrichtung durch die Bundesregierung zu Bundesrats-Drucksache 519/25(B), Schreiben des BMI vom 19. März 2026"
+    url: https://dserver.bundestag.de/brd/2025/0519-25B(zu).pdf
+    datum: 2026-03-19
+    geraadpleegd: 2026-11-14
+    bewijs: direct
+bijgewerkt: 2026-11-14

@@ -1,0 +1,104 @@
+---
+import Basis from '../../layouts/Basis.astro';
+import Status from '../../components/Status.astro';
+import { getEntry } from 'astro:content';
+import { versprechen, parteien } from '../../lib/daten';
+import { AKKOORD_LABEL, GRUND_LABEL, QUELLE_LABEL, STATUS_ERKLAERUNG, STATUS_LABEL, THEMA_LABEL, datumLang } from '../../lib/begriffe';
+
+export async function getStaticPaths() {
+  const vs = await versprechen();
+  return vs.map((v) => ({ params: { id: v.id }, props: { v } }));
+}
+const { v } = Astro.props;
+const d = v.data;
+const partei = (await getEntry(d.partij))!;
+const ps = await parteien();
+const name = (id: string) => ps.find((p) => p.id === id)?.data.kort ?? id;
+const programmUrl = `${partei.data.programma.url}#page=${d.programma.pdfPagina ?? (typeof d.programma.pagina === 'number' ? d.programma.pagina + partei.data.programma.paginaVerschuiving : 1)}`;
+const quelleAkkoord = d.bronnen.find((b) => b.soort === 'akkoord');
+---
+<Basis titel={`${partei.data.kort}: ${d.titel}`} beschreibung={d.samenvatting}>
+  <p class="meta"><a href={`/parteien/${partei.id}/`}>{partei.data.naam}</a> · <a href={`/themen/${d.thema}/`}>{THEMA_LABEL[d.thema]}</a>{d.kern && <span> · Kernversprechen</span>}</p>
+  <h1>{partei.data.kort}: {d.titel}</h1>
+  <p><Status status={d.status} voorstel={d.statusVoorstel} /></p>
+  {d.status === 'onderzoek' && (
+    <p class="hinweis">Dieses Versprechen wird noch geprüft. Der Vorschlag „{STATUS_LABEL[d.statusVoorstel!]}“ ist ein Entwurf; darüber entscheidet ein Mensch, und die Partei kann vorher Stellung nehmen.</p>
+  )}
+  <p class="einleitung">{d.samenvatting}</p>
+  <p class="klein">{STATUS_ERKLAERUNG[d.statusVoorstel ?? d.status]} Wir messen am Wahlprogramm, nicht am Koalitionsvertrag. Stand: {datumLang(d.bijgewerkt)}.</p>
+
+  <h2>Was steht im Wahlprogramm?</h2>
+  <blockquote>„{d.citaat}“</blockquote>
+  <p class="klein">Aus: <a href={programmUrl}>{partei.data.programma.titel}</a> ({partei.data.programma.jaar}), Seite {d.programma.pagina}{d.programma.pdfPagina && d.programma.pdfPagina !== d.programma.pagina ? ` (Seite ${d.programma.pdfPagina} im PDF)` : ''}, {d.programma.hoofdstuk}.</p>
+  {d.kern && d.kernReden && <p class="klein"><a href="/methode/#kernversprechen">Kernversprechen</a>. {d.kernReden}</p>}
+
+  <h2>Wann gilt das als umgesetzt?</h2>
+  <p>{d.criterium}</p>
+  <p class="klein">Diesen Maßstab legen wir fest, bevor wir die Umsetzung prüfen.</p>
+
+  <h2>Vom Programm zur Umsetzung</h2>
+  <ol class="kette">
+    <li><span class="schritt">Programm</span><br />Versprochen, S. {d.programma.pagina}</li>
+    <li><span class="schritt">Koalitionsvertrag</span><br />{AKKOORD_LABEL[d.akkoord.oordeel]}
+      {d.akkoord.citaat && <blockquote>„{d.akkoord.citaat}“</blockquote>}
+      {d.akkoord.zeile && <span class="klein">{quelleAkkoord ? <a href={quelleAkkoord.url}>Koalitionsvertrag</a> : 'Koalitionsvertrag'}, Zeile {d.akkoord.zeile}{d.akkoord.pagina && `, S. ${d.akkoord.pagina}`}</span>}
+    </li>
+    <li><span class="schritt">Umsetzung</span><br /><Status status={d.status} voorstel={d.statusVoorstel} /></li>
+  </ol>
+
+  <h2>Was ist passiert?</h2>
+  <p>{d.toelichting}</p>
+
+  {d.waaromAnders && (
+    <>
+      <h2>Warum anders?</h2>
+      <p><strong>{GRUND_LABEL[d.waaromAnders.reden]}.</strong> {d.waaromAnders.bron} {d.waaromAnders.url && <a href={d.waaromAnders.url}>Quelle</a>}</p>
+    </>
+  )}
+
+  {d.stemmingen.length > 0 && (
+    <>
+      <h2>Abstimmungen</h2>
+      <div class="tabelle"><table>
+        <thead><tr><th>Datum</th><th>Abstimmung</th><th>Dafür</th><th>Dagegen</th><th>Enthaltung</th><th>Art</th></tr></thead>
+        <tbody>
+          {d.stemmingen.map((s) => (
+            <tr>
+              <td>{datumLang(s.datum)}</td>
+              <td>{s.titel}{s.drucksache && ` (Drucksache ${s.drucksache})`}: {s.uitslag === 'aangenomen' ? 'angenommen' : 'abgelehnt'}</td>
+              <td>{s.voor.map(name).join(', ') || '–'}</td>
+              <td>{s.tegen.map(name).join(', ') || '–'}</td>
+              <td>{s.onthouding.map(name).join(', ') || '–'}</td>
+              <td><a href={s.bron}>{s.wijze === 'namentlich' ? 'namentlich' : 'Handzeichen'}{s.bronSeite && `, S. ${s.bronSeite}`}</a></td>
+            </tr>
+          ))}
+        </tbody>
+      </table></div>
+      {d.stemmingen.map((s) => s.richtingUitleg && <p class="klein">{s.richtingUitleg}</p>)}
+    </>
+  )}
+
+  <h2>Stellungnahme der Partei</h2>
+  {d.reactie.soort === 'reactie' && (<><blockquote>{d.reactie.tekst}</blockquote><p class="klein">{d.reactie.afzender}, {datumLang(d.reactie.datum)}</p></>)}
+  {d.reactie.soort === 'geen-reactie' && <p>Angefragt am {datumLang(d.reactie.gevraagd)}, noch keine Antwort.</p>}
+  {d.reactie.soort === 'nog-niet-gevraagd' && <p>Noch nicht angefragt. Wir fragen jede Partei vor der Veröffentlichung.</p>}
+
+  <h2>Quellen</h2>
+  <ol class="quellen">
+    {d.bronnen.map((b) => (
+      <li>
+        <strong>{QUELLE_LABEL[b.soort]}:</strong> <a href={b.url}>{b.titel}</a>{b.datum && `, ${datumLang(b.datum)}`}.
+        {b.citaat && <> „{b.citaat}“</>}
+        <span class="klein"> Abgerufen am {datumLang(b.geraadpleegd)}.</span>
+      </li>
+    ))}
+  </ol>
+
+  {d.geschiedenis.length > 0 && (
+    <>
+      <h2>Verlauf</h2>
+      <ul>{d.geschiedenis.map((g) => <li>{datumLang(g.datum)}: {STATUS_LABEL[g.van]} → {STATUS_LABEL[g.naar]} ({g.bron})</li>)}</ul>
+    </>
+  )}
+  <p class="klein">Fehler gefunden? <a href="/kontakt/">Schreiben Sie uns</a>. Korrekturen stehen auf der Seite <a href="/korrekturen/">Korrekturen</a>.</p>
+</Basis>

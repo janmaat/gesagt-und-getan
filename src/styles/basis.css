@@ -1,0 +1,101 @@
+/* Gesagt und getan? – Grundstil. Keine externen Schriften, nur Systemschriften. */
+:root {
+  --hintergrund: #fbfaf7;
+  --flaeche: #ffffff;
+  --text: #1d1d1b;
+  --text-leise: #5a5953;
+  --linie: #dddad2;
+  --akzent: #1f4e79;
+  --akzent-text: #ffffff;
+  --fokus: #b45309;
+  --st-nagekomen: #1b6b3a;
+  --st-deels: #4d7c0f;
+  --st-uitvoering: #1f5f99;
+  --st-vastgelopen: #8a5a00;
+  --st-gebroken: #9b1c1c;
+  --st-geenakkoord: #57534e;
+  --st-onderzoek: #6b21a8;
+  --radius: 6px;
+  --schrift: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --hintergrund: #161614;
+    --flaeche: #1f1f1c;
+    --text: #ecebe6;
+    --text-leise: #aaa89f;
+    --linie: #3a3934;
+    --akzent: #8cb8e6;
+    --akzent-text: #0f1a26;
+    --fokus: #f59e0b;
+    --st-nagekomen: #6cc28c;
+    --st-deels: #a3c95a;
+    --st-uitvoering: #7fb3e6;
+    --st-vastgelopen: #e0b04a;
+    --st-gebroken: #f08a8a;
+    --st-geenakkoord: #b8b4ad;
+    --st-onderzoek: #c9a3f0;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--hintergrund);
+  color: var(--text);
+  font-family: var(--schrift);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+.breite { max-width: 52rem; margin: 0 auto; padding: 0 16px; }
+a { color: var(--akzent); text-underline-offset: 0.15em; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid var(--fokus); outline-offset: 2px; }
+h1, h2, h3 { line-height: 1.25; }
+h1 { font-size: 1.9rem; margin: 1.5rem 0 0.75rem; }
+h2 { font-size: 1.35rem; margin: 2rem 0 0.5rem; }
+h3 { font-size: 1.1rem; margin: 1.5rem 0 0.25rem; }
+blockquote { margin: 0.75rem 0; padding: 0.5rem 1rem; border-left: 4px solid var(--linie); background: var(--flaeche); }
+table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+th, td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--linie); vertical-align: top; }
+.tabelle { overflow-x: auto; }
+.sprung { position: absolute; left: -999px; }
+.sprung:focus { left: 16px; top: 8px; background: var(--flaeche); padding: 0.5rem; z-index: 10; }
+.vorschau { background: var(--st-onderzoek); color: #fff; text-align: center; padding: 0.4rem 16px; font-weight: 600; }
+.kopf { border-bottom: 1px solid var(--linie); background: var(--flaeche); }
+.kopf-innen { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem 1.5rem; padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.marke { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 700; font-size: 1.15rem; color: var(--text); text-decoration: none; }
+.kopf nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; margin: 0; padding: 0; }
+.kopf nav a { color: var(--text); text-decoration: none; }
+.kopf nav a[aria-current="page"], .kopf nav a:hover { text-decoration: underline; }
+main { padding-bottom: 3rem; min-height: 60vh; }
+.fuss { border-top: 1px solid var(--linie); background: var(--flaeche); padding: 1.5rem 0; color: var(--text-leise); font-size: 0.95rem; }
+.fuss-links { list-style: none; display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; padding: 0; }
+.klein { font-size: 0.875rem; color: var(--text-leise); }
+.leise { color: var(--text-leise); }
+.einleitung { font-size: 1.2rem; }
+.status { display: inline-block; padding: 0.1rem 0.55rem; border-radius: 999px; font-size: 0.875rem; font-weight: 600; border: 2px solid currentColor; white-space: nowrap; }
+.status-nagekomen { color: var(--st-nagekomen); }
+.status-deels { color: var(--st-deels); }
+.status-uitvoering { color: var(--st-uitvoering); }
+.status-vastgelopen { color: var(--st-vastgelopen); }
+.status-gebroken { color: var(--st-gebroken); }
+.status-geenakkoord { color: var(--st-geenakkoord); }
+.status-onderzoek { color: var(--st-onderzoek); border-style: dashed; }
+.karten { list-style: none; padding: 0; display: grid; gap: 0.75rem; }
+.karte { background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius); padding: 0.9rem 1rem; }
+.karte h3 { margin: 0.25rem 0; }
+.karte p { margin: 0.25rem 0; }
+.meta { display: flex; flex-wrap: wrap; gap: 0.25rem 0.75rem; align-items: center; font-size: 0.9rem; color: var(--text-leise); }
+.kette { list-style: none; padding: 0; display: grid; gap: 0.75rem; }
+@media (min-width: 40rem) { .kette { grid-template-columns: repeat(3, 1fr); } }
+.kette li { background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius); padding: 0.75rem; }
+.kette .schritt { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-leise); }
+.hinweis { background: var(--flaeche); border: 1px solid var(--linie); border-left: 4px solid var(--st-onderzoek); border-radius: var(--radius); padding: 0.75rem 1rem; }
+.filter { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: end; margin: 1rem 0; }
+.filter label { display: grid; gap: 0.2rem; font-size: 0.9rem; }
+.filter select { font: inherit; padding: 0.3rem; border: 1px solid var(--linie); border-radius: var(--radius); background: var(--flaeche); color: var(--text); }
+.quellen li { margin-bottom: 0.5rem; }
+dl.begriffe dt { font-weight: 700; margin-top: 1rem; }
+dl.begriffe dd { margin: 0.25rem 0 0; }

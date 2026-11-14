@@ -1,0 +1,66 @@
+partij: cdu-csu
+kabinet: merz
+thema: overheidsfinancien
+status: onderzoek
+statusVoorstel: nagekomen
+titel: Pendlerpauschale erhöhen
+samenvatting: >-
+  Seit dem 1. Januar 2026 gilt die Pendlerpauschale von 38 Cent ab dem ersten Kilometer dauerhaft.
+  Vorher galten 30 Cent für die ersten 20 Kilometer.
+citaat: "Wir erhöhen die Pendlerpauschale."
+programma:
+  pagina: 1
+  pdfPagina: 3
+  hoofdstuk: "Kurzfassung – Für ein neues Wohlstandsversprechen"
+criterium: >-
+  Umgesetzt, wenn die Entfernungspauschale (§ 9 Abs. 1 Satz 3 Nr. 4 EStG) per Gesetz über dem Stand
+  vom Wahltag liegt, mindestens für einen Teil der Kilometer und nicht nur befristet.
+  Teilweise umgesetzt bei einer nur befristeten Erhöhung. In Arbeit, wenn ein Gesetzentwurf vorliegt.
+  Das Programm nennt keinen Betrag und kein Datum.
+akkoord:
+  oordeel: ja
+  citaat: "Wir werden die Pendlerpauschale zum 01.01.2026 auf 38 Cent ab dem ersten Kilometer dauerhaft erhöhen."
+  zeile: "1483–1485"
+  pagina: 46
+toelichting: >-
+  Die Bundesregierung legte das Steueränderungsgesetz 2025 vor (Drucksache 21/1974). Darin steigt die
+  Entfernungspauschale auf 38 Cent ab dem ersten Kilometer. Das Gesetz wurde mit Zustimmung des
+  Bundesrates im Bundesgesetzblatt verkündet (BGBl. 2025 I Nr. 363). Die Änderung gilt seit dem
+  1. Januar 2026. Für Strecken ab dem 21. Kilometer galten schon vorher 38 Cent, allerdings befristet.
+kern: true
+kernReden: >-
+  Steht in der Kurzfassung vor dem ersten Kapitel (Vorspann), S. 1. Nr. 3 der ersten zehn prüfbaren Versprechen.
+  Hinweis: Dass die Kurzfassung als Vorspann zählt, ist noch eine offene Entscheidung.
+bronnen:
+  - soort: programma
+    titel: "Politikwechsel für Deutschland. Wahlprogramm von CDU und CSU, S. 1 (Kurzfassung) und S. 12"
+    url: https://www.cdu.de/app/uploads/2025/01/km_btw_2025_wahlprogramm_langfassung_ansicht.pdf
+    datum: ''
+    geraadpleegd: 2026-11-14
+    citaat: "Pendler entlasten. Die Pendlerpauschale erhöhen wir."
+  - soort: akkoord
+    titel: "Koalitionsvertrag „Verantwortung für Deutschland“, Zeilen 1483–1485"
+    url: https://www.cdu.de/app/uploads/2025/04/Koalitionsvertrag-%E2%80%93-barrierefreie-Version.pdf
+    datum: ''
+    geraadpleegd: 2026-11-14
+  - soort: drucksache
+    titel: "Gesetzentwurf der Bundesregierung: Entwurf eines Steueränderungsgesetzes 2025, Drucksache 21/1974"
+    url: https://dserver.bundestag.de/btd/21/019/2101974.pdf
+    datum: 2025-10-06
+    geraadpleegd: 2026-11-14
+    bewijs: direct
+    citaat: "Aus Gründen der Gleichbehandlung werden nunmehr ab dem ersten Entfernungskilometer 38 Cent für alle Steuerpflichtigen gewährt."
+  - soort: drucksache
+    titel: "Beschlussempfehlung und Bericht des Finanzausschusses, Drucksache 21/3104"
+    url: https://dserver.bundestag.de/btd/21/031/2103104.pdf
+    datum: 2025-12-03
+    geraadpleegd: 2026-11-14
+    bewijs: indirect
+  - soort: bgbl
+    titel: "Steueränderungsgesetz 2025 vom 22. Dezember 2025, BGBl. 2025 I Nr. 363, Artikel 2 Nr. 3 und Artikel 12 Abs. 2"
+    url: https://www.recht.bund.de/bgbl/1/2025/363/VO.html
+    datum: 2025-12-23
+    geraadpleegd: 2026-11-14
+    bewijs: direct
+    citaat: "In Satz 2 wird die Angabe „0,30 Euro“ durch die Angabe „0,38 Euro“ ersetzt."
+bijgewerkt: 2026-11-14

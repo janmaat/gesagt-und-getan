@@ -1,0 +1,17 @@
+---
+import Basis from '../layouts/Basis.astro';
+import { BETREIBER, feld } from '../lib/betreiber';
+---
+<Basis titel="Impressum" suchbar={false}>
+  <h1>Impressum</h1>
+  <p class="hinweis">Entwurf. Vor der Veröffentlichung von einer Juristin oder einem Juristen prüfen lassen (siehe Bericht, Teil 4).</p>
+  <h2>Anbieter</h2>
+  <p>{feld(BETREIBER.name)}<br />{feld(BETREIBER.anschrift)}</p>
+  <p>E-Mail: {feld(BETREIBER.email)}</p>
+  {BETREIBER.kvk && <p>Handelsregister: Kamer van Koophandel (Niederlande), Nr. {BETREIBER.kvk}</p>}
+  {BETREIBER.ustId && <p>USt-IdNr.: {BETREIBER.ustId}</p>}
+  <h2>Verantwortlich für den Inhalt</h2>
+  <p>{feld(BETREIBER.name)}, Anschrift wie oben.</p>
+  <h2>Stellungnahmen und Gegendarstellungen</h2>
+  <p>Wer von einer Tatsachenbehauptung auf dieser Seite betroffen ist, kann sich an die oben genannte Adresse wenden. Wir antworten so schnell wie möglich.</p>
+</Basis>

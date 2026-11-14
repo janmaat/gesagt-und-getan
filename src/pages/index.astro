@@ -1,0 +1,49 @@
+---
+import Basis from '../layouts/Basis.astro';
+import Karte from '../components/Karte.astro';
+import { parteien, versprechen, zaehle } from '../lib/daten';
+import { STATUS_LABEL, STATUS_REIHENFOLGE } from '../lib/begriffe';
+const ps = await parteien();
+const vs = await versprechen();
+const parteiVon = new Map(ps.map((p) => [p.id, p]));
+const zahlen = zaehle(vs);
+---
+<Basis titel="Startseite">
+  <h1>Gesagt und getan?</h1>
+  <p class="einleitung">Wir vergleichen, was die Parteien im Bundestag vor der Wahl versprochen haben, mit dem, was im Koalitionsvertrag steht und was danach beschlossen wurde – für alle Fraktionen nach denselben Regeln und immer mit Quelle.</p>
+  <p><a href="/methode/">So arbeiten wir</a> · <a href="/finanzierung/">Wer uns bezahlt</a></p>
+
+  <h2>Stand der Versprechen</h2>
+  {vs.length === 0 ? (
+    <p class="hinweis">Noch keine Versprechen veröffentlicht. Wir veröffentlichen die Kernversprechen aller Parteien gleichzeitig, sobald jedes geprüft ist und die Parteien Stellung nehmen konnten.</p>
+  ) : (
+    <ul>
+      {STATUS_REIHENFOLGE.filter((s) => zahlen[s]).map((s) => (
+        <li><a href={`/versprechen/?status=${s}`}>{STATUS_LABEL[s]}</a>: {zahlen[s]} von {vs.length}</li>
+      ))}
+    </ul>
+  )}
+  <p class="klein">Wir vergeben keine Noten und machen keine Rangliste der Parteien. Wir nennen nur Anzahlen, mit einem Link zu jedem Fall.</p>
+
+  <h2>Parteien</h2>
+  <ul class="karten">
+    {ps.map((p) => {
+      const eigene = vs.filter((v) => v.data.partij.id === p.id);
+      return (
+        <li class="karte">
+          <h3><a href={`/parteien/${p.id}/`}>{p.data.naam}</a></h3>
+          <p class="meta">{p.data.zetelsVerkiezing} {p.data.zetelsVerkiezing === 1 ? 'Sitz' : 'Sitze'} bei der Wahl 2025 · {p.data.regering ? 'Regierung' : 'Opposition'} · {eigene.length} Versprechen</p>
+        </li>
+      );
+    })}
+  </ul>
+
+  {vs.length > 0 && (
+    <>
+      <h2>Zuletzt bearbeitet</h2>
+      <ul class="karten">
+        {[...vs].sort((a, b) => b.data.bijgewerkt.localeCompare(a.data.bijgewerkt)).slice(0, 6).map((v) => <Karte v={v} partei={parteiVon.get(v.data.partij.id)} />)}
+      </ul>
+    </>
+  )}
+</Basis>

@@ -1,0 +1,25 @@
+{
+  "name": "gesagt-und-getan",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Gesagt und getan? – unabhängige Seite, die Wahlversprechen aller Parteien im Bundestag verfolgt.",
+  "scripts": {
+    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "vorschau": "ASTRO_TELEMETRY_DISABLED=1 PUBLIC_VORSCHAU=1 astro dev",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build && pagefind --site dist",
+    "build:vorschau": "ASTRO_TELEMETRY_DISABLED=1 PUBLIC_VORSCHAU=1 astro build && pagefind --site dist",
+    "pruefen": "node scripts/pruefe-dist.mjs",
+    "pruefen:live": "node scripts/pruefe-dist.mjs --live",
+    "test": "npm run build && npm run pruefen"
+  },
+  "dependencies": {
+    "astro": "5.18.2"
+  },
+  "devDependencies": {
+    "pagefind": "1.4.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

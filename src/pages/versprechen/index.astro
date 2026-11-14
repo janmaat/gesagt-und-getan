@@ -1,0 +1,66 @@
+---
+import Basis from '../../layouts/Basis.astro';
+import Karte from '../../components/Karte.astro';
+import { parteien, versprechen } from '../../lib/daten';
+import { STATUS_LABEL, STATUS_REIHENFOLGE, THEMA_LABEL } from '../../lib/begriffe';
+const ps = await parteien();
+const vs = await versprechen();
+const parteiVon = new Map(ps.map((p) => [p.id, p]));
+const themen = [...new Set(vs.map((v) => v.data.thema))];
+---
+<Basis titel="Alle Versprechen">
+  <h1>Alle Versprechen</h1>
+  <p>Wir verfolgen nur Versprechen, die man prüfen kann. Die Reihenfolge der Parteien folgt ihren Sitzen bei der Bundestagswahl 2025.</p>
+  {vs.length === 0 ? (
+    <p class="hinweis">Noch keine Versprechen veröffentlicht. Jedes Versprechen wird erst veröffentlicht, wenn ein Mensch es geprüft hat und die Partei Stellung nehmen konnte.</p>
+  ) : (
+    <>
+      <form class="filter" id="filter" aria-label="Versprechen filtern">
+        <label>Partei
+          <select name="partei"><option value="">Alle</option>{ps.map((p) => <option value={p.id}>{p.data.naam}</option>)}</select>
+        </label>
+        <label>Status
+          <select name="status"><option value="">Alle</option>{STATUS_REIHENFOLGE.map((s) => <option value={s}>{STATUS_LABEL[s]}</option>)}</select>
+        </label>
+        <label>Thema
+          <select name="thema"><option value="">Alle</option>{themen.map((t) => <option value={t}>{THEMA_LABEL[t]}</option>)}</select>
+        </label>
+        <label>Nur Kernversprechen
+          <select name="kern"><option value="">Nein</option><option value="ja">Ja</option></select>
+        </label>
+      </form>
+      <p class="leise" id="anzahl" aria-live="polite">{vs.length} Versprechen</p>
+      <ul class="karten" id="liste">
+        {vs.map((v) => (
+          <Karte v={v} partei={parteiVon.get(v.data.partij.id)} daten={{ 'data-partei': v.data.partij.id, 'data-status': v.data.status, 'data-thema': v.data.thema, 'data-kern': v.data.kern ? 'ja' : '' }} />
+        ))}
+      </ul>
+    </>
+  )}
+</Basis>
+<script>
+  // Filter ohne Cookies und ohne Speicherung; Auswahl steht nur in der Adresse.
+  const form = document.getElementById('filter') as HTMLFormElement | null;
+  const liste = document.getElementById('liste');
+  const anzahl = document.getElementById('anzahl');
+  if (form && liste && anzahl) {
+    const params = new URLSearchParams(location.search);
+    for (const el of Array.from(form.elements) as HTMLSelectElement[]) {
+      if (params.has(el.name)) el.value = params.get(el.name) ?? '';
+    }
+    const anwenden = () => {
+      const f = Object.fromEntries(new FormData(form)) as Record<string, string>;
+      let n = 0;
+      for (const item of Array.from(liste.children) as HTMLElement[]) {
+        const passt = Object.entries(f).every(([k, wert]) => !wert || item.dataset[k] === wert);
+        item.hidden = !passt;
+        if (passt) n++;
+      }
+      anzahl.textContent = `${n} Versprechen`;
+      const q = new URLSearchParams(Object.entries(f).filter(([, w]) => w));
+      history.replaceState(null, '', q.toString() ? `?${q}` : location.pathname);
+    };
+    form.addEventListener('change', anwenden);
+    anwenden();
+  }
+</script>

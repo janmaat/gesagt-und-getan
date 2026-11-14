@@ -1,0 +1,71 @@
+---
+import Basis from '../layouts/Basis.astro';
+import { parteien, versprechen, zaehle } from '../lib/daten';
+import { GRUND_LABEL, STATUS_ERKLAERUNG, STATUS_LABEL, STATUS_REIHENFOLGE } from '../lib/begriffe';
+const ps = await parteien();
+const vs = await versprechen();
+const sichtbareStatus = STATUS_REIHENFOLGE.filter((s) => s !== 'onderzoek');
+---
+<Basis titel="So arbeiten wir">
+  <h1>So arbeiten wir</h1>
+  <p class="einleitung">Wir messen jedes Versprechen am Text des Wahlprogramms, nicht an der abgeschwächten Fassung im Koalitionsvertrag. Zu jeder Bewertung steht die Quelle, damit Sie sie selbst nachlesen können.</p>
+
+  <h2 id="auswahl">Welche Versprechen wir verfolgen</h2>
+  <p>Wir verfolgen nur Versprechen, die man prüfen kann: eine konkrete Maßnahme, eine Zahl oder ein Datum. „Wir stärken die Wirtschaft“ ist kein prüfbares Versprechen. „Wir erhöhen die Pendlerpauschale“ ist eines.</p>
+
+  <h2 id="parteien">Welche Parteien wir verfolgen</h2>
+  <p>Alle Parteien, die nach der letzten Bundestagswahl im Bundestag sitzen, in der Reihenfolge ihrer Sitze, auch die Opposition. Für jede Partei gelten dieselben Regeln, dieselben Arten von Quellen und derselbe Ton.</p>
+
+  <h2 id="bewertung">Wie wir bewerten</h2>
+  <ol>
+    <li>Wir zitieren das Wahlprogramm wörtlich, mit Seitenzahl und Link zum PDF der Partei.</li>
+    <li>Wir schreiben auf, wann das Versprechen als umgesetzt gilt. Das tun wir, bevor wir die Umsetzung prüfen.</li>
+    <li>Wir suchen das Versprechen im Koalitionsvertrag: übernommen, geändert oder nicht aufgenommen.</li>
+    <li>Wir prüfen die Umsetzung in amtlichen Quellen: Drucksachen, Plenarprotokolle, Bundesgesetzblatt, Bundeshaushalt, Abstimmungsergebnisse und Zahlen von Destatis. Nachrichten nutzen wir nur ergänzend.</li>
+    <li>Ein Mensch prüft jede Bewertung, bevor sie erscheint.</li>
+  </ol>
+
+  <h2 id="kernversprechen">Kernversprechen</h2>
+  <p>Pro Partei markieren wir höchstens zehn Kernversprechen nach einer festen Regel: die ersten zehn prüfbaren Versprechen aus dem Vorspann des Programms (alles vor dem ersten Kapitel, auch eine vorangestellte Kurzfassung) und aus den Kapitelanfängen (alles zwischen Kapiteltitel und erster Zwischenüberschrift), in der Reihenfolge des Programms. Ergibt ein Programm dort weniger als zehn, hat die Partei weniger Kernversprechen. Wir füllen nicht nach eigener Wahl auf. Wie viele es sind, hängt also auch vom Aufbau des Programms ab.</p>
+
+  <h2 id="status">Die sechs Status</h2>
+  <dl class="begriffe">
+    {sichtbareStatus.map((s) => (<><dt><span class={`status status-${s}`}>{STATUS_LABEL[s]}</span></dt><dd>{STATUS_ERKLAERUNG[s]}</dd></>))}
+  </dl>
+  <h3>Wann gilt etwas als „In Arbeit“?</h3>
+  <ul>
+    <li>Ein Gesetzentwurf der Bundesregierung gilt ab der Drucksache, mit der er dem Bundesrat zugeleitet wird. Ein Referentenentwurf eines Ministeriums reicht nicht.</li>
+    <li>Ein Gesetzentwurf der Koalitionsfraktionen zählt wie ein Entwurf der Bundesregierung. Ein Entwurf der Opposition zählt erst, wenn er angenommen ist.</li>
+    <li>Geld gilt als eingeplant, wenn es im Regierungsentwurf des Haushalts steht.</li>
+    <li>Ein angenommener Antrag ist eine Aufforderung an die Regierung und zählt nicht als Umsetzung.</li>
+    <li>Ein Gesetz gilt als umgesetzt, wenn es in Kraft getreten ist.</li>
+  </ul>
+
+  <h2 id="warum-anders">Warum es anders kam</h2>
+  <p>Weicht die Umsetzung vom Programm ab, nennen wir einen Grund aus einer festen Liste und belegen ihn mit einer Quelle: {Object.values(GRUND_LABEL).join(', ')}. Bei Versprechen der Opposition nennen wir keinen eigenen Grund: Sie hat den Koalitionsvertrag nicht mitverhandelt.</p>
+
+  <h2 id="ebenen">Bund, Länder und EU</h2>
+  <p>Manches kann der Bund nicht allein entscheiden. Liegt die Zuständigkeit bei den Ländern, bewerten wir, was der Bund getan hat, und sagen dazu, dass die Länder zuständig sind. Kann ein Versprechen nur in der EU umgesetzt werden, zählt ein Vorschlag der Europäischen Kommission, wenn die Bundesregierung ihn unterstützt.</p>
+
+  <h2 id="keine-rangliste">Keine Rangliste</h2>
+  <p>Wir vergeben keine Noten und vergleichen Parteien nicht in einer Rangliste. Wir nennen nur Anzahlen mit Link zu jedem Fall.</p>
+
+  <h2 id="stellungnahme">Stellungnahme der Parteien</h2>
+  <p>Jede Partei kann vor der Veröffentlichung Stellung nehmen. Ihre Antwort steht wörtlich auf der Seite des Versprechens.</p>
+
+  <h2 id="fehler">Fehler und Korrekturen</h2>
+  <p>Wenn wir einen Fehler machen, korrigieren wir ihn sichtbar und führen ihn auf der Seite <a href="/korrekturen/">Korrekturen</a> auf.</p>
+
+  <h2 id="zahlen">Zahlen zu dieser Seite</h2>
+  <div class="tabelle"><table>
+    <thead><tr><th>Partei</th><th>Versprechen</th><th>davon Kern</th>{sichtbareStatus.map((s) => <th>{STATUS_LABEL[s]}</th>)}</tr></thead>
+    <tbody>
+      {ps.map((p) => {
+        const e = vs.filter((v) => v.data.partij.id === p.id);
+        const z = zaehle(e);
+        return <tr><td>{p.data.kort}</td><td>{e.length}</td><td>{e.filter((v) => v.data.kern).length}</td>{sichtbareStatus.map((s) => <td>{z[s] ?? 0}</td>)}</tr>;
+      })}
+    </tbody>
+  </table></div>
+  <p class="klein">Diese Zahlen werden bei jeder Veröffentlichung neu berechnet.</p>
+</Basis>

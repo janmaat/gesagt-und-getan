@@ -1,0 +1,19 @@
+---
+import Basis from '../../layouts/Basis.astro';
+import Karte from '../../components/Karte.astro';
+import { parteien, versprechen } from '../../lib/daten';
+import { THEMA_LABEL } from '../../lib/begriffe';
+import { THEMEN } from '../../content.config';
+export function getStaticPaths() {
+  return THEMEN.map((t) => ({ params: { id: t } }));
+}
+const { id } = Astro.params;
+const ps = await parteien();
+const parteiVon = new Map(ps.map((p) => [p.id, p]));
+const liste = (await versprechen()).filter((v) => v.data.thema === id);
+---
+<Basis titel={THEMA_LABEL[id!]}>
+  <h1>{THEMA_LABEL[id!]}</h1>
+  {liste.length === 0 ? <p>Zu diesem Thema ist noch nichts veröffentlicht.</p> : <ul class="karten">{liste.map((v) => <Karte v={v} partei={parteiVon.get(v.data.partij.id)} />)}</ul>}
+  <p><a href="/themen/">Alle Themen</a></p>
+</Basis>

@@ -1,0 +1,67 @@
+partij: linke
+kabinet: merz
+thema: overheidsfinancien
+status: onderzoek
+statusVoorstel: geenakkoord
+titel: Keine Mehrwertsteuer auf Grundnahrungsmittel
+samenvatting: >-
+  Nicht im Koalitionsvertrag. Einen Antrag der Linken dazu lehnte der Bundestag im September 2025 ab.
+citaat: "Deshalb wollen wir die Mehrwertsteuer auf Grundnahrungsmittel abschaffen"
+programma:
+  pagina: 4
+  hoofdstuk: Einleitung
+criterium: Umgesetzt, wenn der Mehrwertsteuersatz auf Grundnahrungsmittel per Gesetz bei 0 Prozent liegt und das Gesetz gilt.
+akkoord:
+  oordeel: nee
+toelichting: >-
+  Der Koalitionsvertrag enthält dazu nichts; zur Umsatzsteuer steht dort nur die Senkung für Speisen in der
+  Gastronomie auf sieben Prozent. Die Fraktion Die Linke stellte einen Antrag (Drucksache 21/135).
+  Der Bundestag folgte am 12. September 2025 der Empfehlung des Finanzausschusses, den Antrag abzulehnen.
+  Eine andere Umsetzung wurde nicht gefunden. Der aktuelle Wortlaut von § 12 UStG ist noch nicht geprüft.
+kern: true
+kernReden: Steht in der Einleitung (Vorspann), S. 4. Nr. 2 der ersten zehn prüfbaren Versprechen.
+stemmingen:
+  - soort: antrag
+    orgaan: bundestag
+    wijze: handzeichen
+    titel: "Mehrwertsteuer auf Grundnahrungsmittel, Hygieneprodukte und auf Bus und Bahn abschaffen"
+    drucksache: "21/135"
+    datum: 2025-09-12
+    uitslag: verworpen
+    voor: [linke]
+    tegen: [cdu-csu, spd, afd]
+    onthouding: [gruene]
+    bron: https://dserver.bundestag.de/btp/21/21022.pdf
+    bronSeite: "2247A"
+    richting: voor
+    richtingUitleg: Die Linke stimmte für ihren eigenen Antrag, wie im Programm versprochen.
+bronnen:
+  - soort: programma
+    titel: "Alle wollen regieren. Wir wollen verändern. Wahlprogramm der Linken, S. 4 und S. 6"
+    url: https://www.die-linke.de/fileadmin/user_upload/Wahlprogramm_Langfassung_Linke-BTW25_01.pdf
+    datum: ''
+    geraadpleegd: 2026-11-14
+  - soort: akkoord
+    titel: "Koalitionsvertrag „Verantwortung für Deutschland“ (gesucht: Grundnahrungs, Mehrwertsteuer, Umsatzsteuer, Lebensmittel)"
+    url: https://www.cdu.de/app/uploads/2025/04/Koalitionsvertrag-%E2%80%93-barrierefreie-Version.pdf
+    datum: ''
+    geraadpleegd: 2026-11-14
+  - soort: antrag
+    titel: "Antrag der Fraktion Die Linke, Drucksache 21/135"
+    url: https://dserver.bundestag.de/btd/21/001/2100135.pdf
+    datum: 2025-05-12
+    geraadpleegd: 2026-11-14
+  - soort: drucksache
+    titel: "Beschlussempfehlung des Finanzausschusses, Drucksache 21/1583"
+    url: https://dserver.bundestag.de/btd/21/015/2101583.pdf
+    datum: ''
+    geraadpleegd: 2026-11-14
+    bewijs: direct
+  - soort: plenarprotokoll
+    titel: "Plenarprotokoll 21/22, S. 2247A"
+    url: https://dserver.bundestag.de/btp/21/21022.pdf
+    datum: 2025-09-12
+    geraadpleegd: 2026-11-14
+    bewijs: direct
+    citaat: "Die Beschlussempfehlung ist mit den Stimmen der Fraktionen der CDU/CSU, SPD und AfD angenommen worden bei Ablehnung der Linken und Enthaltung der Grünen."
+bijgewerkt: 2026-11-14

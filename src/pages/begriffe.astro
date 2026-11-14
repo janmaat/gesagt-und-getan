@@ -1,0 +1,12 @@
+---
+import Basis from '../layouts/Basis.astro';
+import { getCollection } from 'astro:content';
+const liste = (await getCollection('begriffe')).sort((a, b) => a.data.begriff.localeCompare(b.data.begriff, 'de'));
+---
+<Basis titel="Begriffe">
+  <h1>Begriffe</h1>
+  <p>Wörter aus der Politik, einfach erklärt.</p>
+  <dl class="begriffe">
+    {liste.map((b) => (<><dt id={b.id}>{b.data.begriff}</dt><dd>{b.data.erklaerung}</dd></>))}
+  </dl>
+</Basis>

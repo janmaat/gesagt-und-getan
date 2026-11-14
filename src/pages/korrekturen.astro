@@ -1,0 +1,16 @@
+---
+import Basis from '../layouts/Basis.astro';
+import { getCollection } from 'astro:content';
+import { datumLang } from '../lib/begriffe';
+const liste = (await getCollection('korrekturen')).sort((a, b) => b.data.datum.localeCompare(a.data.datum));
+---
+<Basis titel="Korrekturen">
+  <h1>Korrekturen</h1>
+  <p>Hier steht jeder Fehler, den wir korrigiert haben: was falsch war, was jetzt richtig ist und wann wir es geändert haben.</p>
+  {liste.length === 0 ? <p>Bisher keine Korrekturen.</p> : (
+    <ul class="karten">{liste.map((k) => (
+      <li class="karte"><p class="meta">{datumLang(k.data.datum)} · <a href={k.data.seite}>{k.data.seite}</a></p><p><strong>Fehler:</strong> {k.data.fehler}</p><p><strong>Korrektur:</strong> {k.data.korrektur}</p></li>
+    ))}</ul>
+  )}
+  <p>Fehler gefunden? <a href="/kontakt/">Schreiben Sie uns</a>.</p>
+</Basis>

@@ -1,0 +1,9 @@
+---
+import Basis from '../layouts/Basis.astro';
+import { BETREIBER, feld } from '../lib/betreiber';
+---
+<Basis titel="Kontakt">
+  <h1>Kontakt</h1>
+  <p>Sie haben einen Fehler gefunden, eine Frage oder eine Stellungnahme als Partei? Schreiben Sie an <strong>{BETREIBER.email ? <a href={`mailto:${BETREIBER.email}`}>{BETREIBER.email}</a> : feld('')}</strong>.</p>
+  <p>Bitte nennen Sie die Seite, um die es geht. Wir lesen jede Nachricht und korrigieren Fehler offen.</p>
+</Basis>

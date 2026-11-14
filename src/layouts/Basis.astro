@@ -1,0 +1,80 @@
+---
+import '../styles/basis.css';
+import { VORSCHAU } from '../lib/daten';
+
+interface Props {
+  titel: string;
+  beschreibung?: string;
+  /** Seite in die Suche aufnehmen (Pagefind). */
+  suchbar?: boolean;
+}
+const { titel, beschreibung = 'Was aus Wahlversprechen wird: Wahlprogramm, Koalitionsvertrag und Umsetzung für alle Parteien im Bundestag, immer mit Quelle.', suchbar = true } = Astro.props;
+const seitentitel = titel === 'Startseite' ? 'Gesagt und getan?' : `${titel} | Gesagt und getan?`;
+const pfad = Astro.url.pathname;
+const navi = [
+  { href: '/versprechen/', text: 'Versprechen' },
+  { href: '/parteien/', text: 'Parteien' },
+  { href: '/themen/', text: 'Themen' },
+  { href: '/methode/', text: 'So arbeiten wir' },
+  { href: '/suche/', text: 'Suche' },
+];
+---
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{seitentitel}</title>
+    <meta name="description" content={beschreibung} />
+    <link rel="canonical" href={new URL(pfad, Astro.site)} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    {VORSCHAU && <meta name="robots" content="noindex, nofollow" />}
+  </head>
+  <body>
+    <a class="sprung" href="#inhalt">Zum Inhalt</a>
+    {VORSCHAU && (
+      <div class="vorschau" role="note">
+        Vorschau: Diese Fassung zeigt auch Versprechen, die noch geprüft werden. Nicht veröffentlichen.
+      </div>
+    )}
+    <header class="kopf">
+      <div class="breite kopf-innen">
+        <a class="marke" href="/" aria-label="Gesagt und getan? – Startseite">
+          <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+            <circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="2.5" />
+            <path d="M16 16 L24 9" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+            <circle cx="16" cy="16" r="2.5" fill="currentColor" />
+          </svg>
+          <span>Gesagt und getan?</span>
+        </a>
+        <nav aria-label="Hauptnavigation">
+          <ul>
+            {navi.map((n) => (
+              <li><a href={n.href} aria-current={pfad.startsWith(n.href) ? 'page' : undefined}>{n.text}</a></li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="inhalt" class="breite" data-pagefind-body={suchbar ? '' : undefined}>
+      <slot />
+    </main>
+    <footer class="fuss">
+      <div class="breite">
+        <p>Gesagt und getan? ist unabhängig und gehört zu keiner Partei. Zu jeder Bewertung steht die Quelle.</p>
+        <ul class="fuss-links">
+          <li><a href="/ueber-uns/">Über uns</a></li>
+          <li><a href="/finanzierung/">Wer uns bezahlt</a></li>
+          <li><a href="/korrekturen/">Korrekturen</a></li>
+          <li><a href="/daten/">Offene Daten</a></li>
+          <li><a href="/begriffe/">Begriffe</a></li>
+          <li><a href="/kontakt/">Kontakt</a></li>
+          <li><a href="/impressum/">Impressum</a></li>
+          <li><a href="/datenschutz/">Datenschutz</a></li>
+          <li><a href="/barrierefreiheit/">Barrierefreiheit</a></li>
+        </ul>
+        <p class="klein">Keine Cookies, kein Tracking. Eigene Texte und Daten: CC BY 4.0. Zitate aus Wahlprogrammen und dem Koalitionsvertrag bleiben Werke ihrer Urheber.</p>
+      </div>
+    </footer>
+  </body>
+</html>

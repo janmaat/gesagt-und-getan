@@ -1,0 +1,16 @@
+---
+import Basis from '../../layouts/Basis.astro';
+import { versprechen } from '../../lib/daten';
+import { THEMA_LABEL } from '../../lib/begriffe';
+import { THEMEN } from '../../content.config';
+const vs = await versprechen();
+---
+<Basis titel="Themen">
+  <h1>Themen</h1>
+  <ul>
+    {THEMEN.map((t) => {
+      const n = vs.filter((v) => v.data.thema === t).length;
+      return <li><a href={`/themen/${t}/`}>{THEMA_LABEL[t]}</a> <span class="leise">({n})</span></li>;
+    })}
+  </ul>
+</Basis>

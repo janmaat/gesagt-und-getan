@@ -1,0 +1,54 @@
+partij: spd
+kabinet: merz
+thema: inkomen
+status: onderzoek
+statusVoorstel: deels
+titel: Mindestlohn von 15 Euro spätestens ab 2026
+samenvatting: >-
+  Der Mindestlohn stieg, aber weniger als versprochen: 13,90 Euro ab 2026 und 14,60 Euro ab 2027.
+citaat: "Dementsprechend muss der Mindestlohn spätestens ab 2026 bei 15 Euro liegen."
+programma:
+  pagina: 23
+  hoofdstuk: "Kapitel 7"
+criterium: >-
+  Umgesetzt, wenn spätestens im Laufe des Jahres 2026 ein gesetzlicher Mindestlohn von mindestens
+  15,00 Euro brutto je Stunde gilt. Teilweise umgesetzt bei einer Erhöhung unter 15 Euro.
+  Aufgegeben, wenn es keine Erhöhung gibt.
+akkoord:
+  oordeel: aangepast
+  citaat: "Auf diesem Weg ist ein Mindestlohn von 15 Euro im Jahr 2026 erreichbar."
+  zeile: "548–552"
+  pagina: 18
+waaromAnders:
+  reden: formatie
+  zekerheid: bevestigd
+  bron: "Koalitionsvertrag, Zeilen 548–552: Die Entscheidung liegt bei der Mindestlohnkommission; 15 Euro gelten als „erreichbar“."
+  url: https://www.cdu.de/app/uploads/2025/04/Koalitionsvertrag-%E2%80%93-barrierefreie-Version.pdf
+toelichting: >-
+  Der Koalitionsvertrag legt die Entscheidung in die Hände der unabhängigen Mindestlohnkommission und nennt
+  15 Euro nur „erreichbar“. Die Bundesregierung setzte den Mindestlohn per Verordnung fest: 13,90 Euro ab dem
+  1. Januar 2026 und 14,60 Euro ab dem 1. Januar 2027 (BGBl. 2025 I Nr. 268).
+  Offene Frage für die Bewertung: Weil die Frist „spätestens ab 2026“ verstrichen ist, wäre auch „Aufgegeben“ vertretbar.
+kern: true
+kernReden: >-
+  Nr. 1 der prüfbaren Versprechen steht im Vorspann „Worauf es jetzt ankommt“, S. 5: „mit einem höheren Mindestlohn“.
+  Die Höhe von 15 Euro steht auf S. 23 und S. 66. Bewertet wird die genaue Fassung von S. 23.
+bronnen:
+  - soort: programma
+    titel: "Mehr für Dich. Besser für Deutschland. Regierungsprogramm der SPD, S. 5, 23 und 66"
+    url: https://www.spd.de/fileadmin/Dokumente/Beschluesse/Programm/2025_SPD_Regierungsprogramm.pdf
+    datum: ''
+    geraadpleegd: 2026-11-14
+  - soort: akkoord
+    titel: "Koalitionsvertrag „Verantwortung für Deutschland“, Zeilen 548–552"
+    url: https://www.cdu.de/app/uploads/2025/04/Koalitionsvertrag-%E2%80%93-barrierefreie-Version.pdf
+    datum: ''
+    geraadpleegd: 2026-11-14
+  - soort: bgbl
+    titel: "Fünfte Mindestlohnanpassungsverordnung vom 5. November 2025, BGBl. 2025 I Nr. 268, § 1"
+    url: https://www.recht.bund.de/bgbl/1/2025/268/VO.html
+    datum: 2025-11-07
+    geraadpleegd: 2026-11-14
+    bewijs: direct
+    citaat: "Der Mindestlohn beträgt 1. ab 1. Januar 2026 13,90 Euro brutto je Zeitstunde, 2. ab 1. Januar 2027 14,60 Euro brutto je Zeitsunde."
+bijgewerkt: 2026-11-14

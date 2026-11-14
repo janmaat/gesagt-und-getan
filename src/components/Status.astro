@@ -1,0 +1,7 @@
+---
+import { STATUS_LABEL } from '../lib/begriffe';
+interface Props { status: string; voorstel?: string }
+const { status, voorstel } = Astro.props;
+---
+<span class={`status status-${status}`}>{STATUS_LABEL[status]}</span>
+{voorstel && <span class="klein"> · Vorschlag: {STATUS_LABEL[voorstel]}</span>}

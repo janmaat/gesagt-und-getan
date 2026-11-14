@@ -1,0 +1,25 @@
+name: Build und Prüfung
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Live-Build
+        run: npm run build
+      - name: Datenschutzregeln prüfen
+        run: npm run pruefen
+      - name: Vorschau-Build (inkl. Versprechen in Prüfung)
+        run: npm run build:vorschau && npm run pruefen

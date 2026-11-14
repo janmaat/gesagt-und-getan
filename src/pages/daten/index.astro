@@ -1,0 +1,17 @@
+---
+import Basis from '../../layouts/Basis.astro';
+import { versprechen } from '../../lib/daten';
+const n = (await versprechen()).length;
+---
+<Basis titel="Offene Daten">
+  <h1>Offene Daten</h1>
+  <p>Alle veröffentlichten Versprechen können Sie herunterladen: für Redaktionen, Schulen, Forschung und alle, die selbst rechnen wollen.</p>
+  <div class="tabelle"><table>
+    <thead><tr><th>Daten</th><th>Anzahl</th><th>JSON</th><th>CSV</th></tr></thead>
+    <tbody><tr><td>Versprechen</td><td>{n}</td><td><a href="/daten/versprechen.json">versprechen.json</a></td><td><a href="/daten/versprechen.csv">versprechen.csv</a></td></tr></tbody>
+  </table></div>
+  <h2>Was drinsteht</h2>
+  <p>Jedes Versprechen mit dem wörtlichen Zitat, Programm und Seite, Koalitionsvertrag, Status, Maßstab und Erläuterung, dem Grund, wenn es anders kam, den Abstimmungen und allen Quellen. Die Feldnamen sind dieselben wie bei Beloftewijzer (niederländisch); zu jedem Status und Thema steht die deutsche Bezeichnung dabei. Die CSV-Datei nutzt ein Semikolon als Trennzeichen; Listen stehen als JSON in einer Zelle.</p>
+  <h2>Lizenz</h2>
+  <p>Die Daten stehen unter <a href="https://creativecommons.org/licenses/by/4.0/deed.de">CC BY 4.0</a>. Nennen Sie „Gesagt und getan?“ als Quelle mit dem Datum des Exports, denn ein Status kann sich ändern. Zitate aus Wahlprogrammen und amtlichen Dokumenten bleiben Werke ihrer Urheber.</p>
+</Basis>

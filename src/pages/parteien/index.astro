@@ -1,0 +1,25 @@
+---
+import Basis from '../../layouts/Basis.astro';
+import { parteien, versprechen } from '../../lib/daten';
+const ps = await parteien();
+const vs = await versprechen();
+---
+<Basis titel="Parteien">
+  <h1>Parteien</h1>
+  <p>Wir verfolgen alle Parteien, die nach der Bundestagswahl vom 23. Februar 2025 im Bundestag sitzen. Die Reihenfolge folgt den Sitzen bei dieser Wahl, groß nach klein. Umfragen spielen keine Rolle.</p>
+  <div class="tabelle"><table>
+    <thead><tr><th>Partei</th><th>Sitze bei der Wahl</th><th>Sitze heute</th><th>Rolle</th><th>Versprechen</th></tr></thead>
+    <tbody>
+      {ps.map((p) => (
+        <tr>
+          <td><a href={`/parteien/${p.id}/`}>{p.data.naam}</a></td>
+          <td>{p.data.zetelsVerkiezing}</td>
+          <td>{p.data.zetelsNu}</td>
+          <td>{p.data.regering ? 'Regierung' : 'Opposition'}{!p.data.fractie && ' (keine Fraktion)'}</td>
+          <td>{vs.filter((v) => v.data.partij.id === p.id).length}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table></div>
+  <p class="klein">Quellen: Bundeswahlleiterin (endgültiges Ergebnis der Bundestagswahl 2025) und Sitzverteilung des Bundestags, Stand 14. November 2026. Drei Abgeordnete sind fraktionslos; zwei davon wurden für die AfD gewählt.</p>
+</Basis>

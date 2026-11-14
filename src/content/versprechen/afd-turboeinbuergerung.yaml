@@ -1,0 +1,63 @@
+partij: afd
+kabinet: merz
+thema: migratie
+status: onderzoek
+statusVoorstel: deels
+titel: Turboeinbürgerung abschaffen
+samenvatting: >-
+  Die Einbürgerung nach drei Jahren ist seit dem 30. Oktober 2025 abgeschafft. Die anderen Teile des
+  Versprechens (Bürgergeld und Bleiberechte für Ausreisepflichtige) sind noch nicht geprüft.
+citaat: "Wir werden vollziehbar ausreisepflichtige Personen konsequent abschieben und bestehende Fehlanreize (Bürgergeld, Bleiberechte für Ausreisepflichtige, Turboeinbürgerung) abstellen."
+programma:
+  pagina: 101
+  pdfPagina: 102
+  hoofdstuk: "Asyl- und Migrationspolitik"
+criterium: >-
+  Für den Teil „Turboeinbürgerung“: umgesetzt, wenn die Möglichkeit, nach drei Jahren eingebürgert zu werden
+  (§ 10 Abs. 3 StAG), per Gesetz gestrichen ist und das Gesetz gilt. Das ganze Versprechen gilt als umgesetzt,
+  wenn auch die anderen genannten Teile umgesetzt sind.
+akkoord:
+  oordeel: aangepast
+  citaat: "Wir schaffen die „Turboeinbürgerung“ nach drei Jahren ab."
+  zeile: "3097–3098"
+  pagina: 96
+toelichting: >-
+  Die Bundesregierung legte einen Gesetzentwurf zur Änderung des Staatsangehörigkeitsgesetzes vor
+  (Drucksache 21/537). Der Bundestag nahm ihn am 8. Oktober 2025 in namentlicher Abstimmung an
+  (450 Ja, 134 Nein, 2 Enthaltungen). Die Abgeordneten der AfD stimmten mit Ja, zwei enthielten sich.
+  Das Gesetz steht im Bundesgesetzblatt (BGBl. 2025 I Nr. 256): „§ 10 Absatz 3 wird gestrichen.“
+  Die übrigen Teile des Versprechens sind noch nicht geprüft.
+kern: true
+kernReden: Nr. 3 der ersten zehn prüfbaren Versprechen aus den Kapitelanfängen des Programms.
+dip: "322125"
+bronnen:
+  - soort: programma
+    titel: "Zeit für Deutschland. Programm der AfD, S. 101"
+    url: https://www.afd.de/wp-content/uploads/2025/02/AfD_Bundestagswahlprogramm2025_web.pdf
+    datum: ''
+    geraadpleegd: 2026-11-14
+  - soort: akkoord
+    titel: "Koalitionsvertrag „Verantwortung für Deutschland“, Zeilen 3097–3098"
+    url: https://www.cdu.de/app/uploads/2025/04/Koalitionsvertrag-%E2%80%93-barrierefreie-Version.pdf
+    datum: ''
+    geraadpleegd: 2026-11-14
+  - soort: drucksache
+    titel: "Gesetzentwurf der Bundesregierung zur Änderung des Staatsangehörigkeitsgesetzes, Drucksache 21/537"
+    url: https://search.dip.bundestag.de/api/v1/vorgang/322125
+    datum: 2025-06-23
+    geraadpleegd: 2026-11-14
+    bewijs: indirect
+  - soort: plenarprotokoll
+    titel: "Plenarprotokoll 21/30, S. 3172B, namentliche Abstimmung"
+    url: https://dserver.bundestag.de/btp/21/21030.pdf
+    datum: 2025-10-08
+    geraadpleegd: 2026-11-14
+    bewijs: indirect
+  - soort: bgbl
+    titel: "Gesetz zur Änderung des Staatsangehörigkeitsgesetzes, BGBl. 2025 I Nr. 256, Artikel 1"
+    url: https://www.recht.bund.de/eli/bund/BGBl_1/2025/256
+    datum: 2025-10-29
+    geraadpleegd: 2026-11-14
+    bewijs: direct
+    citaat: "§ 10 Absatz 3 wird gestrichen."
+bijgewerkt: 2026-11-14

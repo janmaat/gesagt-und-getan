@@ -1,0 +1,36 @@
+---
+import Basis from '../../layouts/Basis.astro';
+import Karte from '../../components/Karte.astro';
+import { parteien, versprechen, zaehle } from '../../lib/daten';
+import { STATUS_LABEL, STATUS_REIHENFOLGE } from '../../lib/begriffe';
+export async function getStaticPaths() {
+  return (await parteien()).map((p) => ({ params: { id: p.id }, props: { p } }));
+}
+const { p } = Astro.props;
+const eigene = (await versprechen()).filter((v) => v.data.partij.id === p.id);
+const kern = eigene.filter((v) => v.data.kern);
+const zahlen = zaehle(eigene);
+---
+<Basis titel={p.data.naam}>
+  <h1>{p.data.naam}</h1>
+  <p class="meta">{p.data.zetelsVerkiezing} {p.data.zetelsVerkiezing === 1 ? 'Sitz' : 'Sitze'} bei der Wahl 2025 · heute {p.data.zetelsNu} · {p.data.regering ? 'Regierung' : 'Opposition'}</p>
+  {p.data.hinweis && <p>{p.data.hinweis}</p>}
+  <h2>Wahlprogramm</h2>
+  <p><a href={p.data.programma.url}>{p.data.programma.titel}</a> ({p.data.programma.paginas} Seiten, PDF auf der Seite der Partei){p.data.programma.beschlossen && `. Beschlossen: ${p.data.programma.beschlossen}`}.</p>
+
+  <h2>Stand</h2>
+  {eigene.length === 0 ? <p>Noch keine Versprechen veröffentlicht.</p> : (
+    <ul>{STATUS_REIHENFOLGE.filter((s) => zahlen[s]).map((s) => <li><a href={`/versprechen/?partei=${p.id}&status=${s}`}>{STATUS_LABEL[s]}</a>: {zahlen[s]} von {eigene.length}</li>)}</ul>
+  )}
+
+  <h2>Kernversprechen</h2>
+  <p class="klein">Höchstens zehn, nach einer festen Regel ausgewählt: die ersten prüfbaren Versprechen aus dem Vorspann und den Kapitelanfängen, in der Reihenfolge des Programms. <a href="/methode/#kernversprechen">Mehr zur Regel</a></p>
+  {kern.length === 0 ? <p>Noch keine veröffentlicht.</p> : <ul class="karten">{kern.map((v) => <Karte v={v} />)}</ul>}
+
+  {eigene.length > kern.length && (
+    <>
+      <h2>Weitere Versprechen</h2>
+      <ul class="karten">{eigene.filter((v) => !v.data.kern).map((v) => <Karte v={v} />)}</ul>
+    </>
+  )}
+</Basis>

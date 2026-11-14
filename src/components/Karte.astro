@@ -1,0 +1,17 @@
+---
+import Status from './Status.astro';
+import { THEMA_LABEL } from '../lib/begriffe';
+import type { Versprechen, Partei } from '../lib/daten';
+interface Props { v: Versprechen; partei?: Partei; daten?: Record<string, string> }
+const { v, partei, daten = {} } = Astro.props;
+---
+<li class="karte" {...daten}>
+  <div class="meta">
+    <Status status={v.data.status} voorstel={v.data.statusVoorstel} />
+    {partei && <span>{partei.data.naam}</span>}
+    <span>{THEMA_LABEL[v.data.thema]}</span>
+    {v.data.kern && <span>Kernversprechen</span>}
+  </div>
+  <h3><a href={`/versprechen/${v.id}/`}>{v.data.titel}</a></h3>
+  <p>{v.data.samenvatting}</p>
+</li>

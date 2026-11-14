@@ -1,0 +1,68 @@
+partij: gruene
+kabinet: merz
+thema: overheidsfinancien
+status: onderzoek
+statusVoorstel: deels
+titel: Deutschlandfonds für Investitionen in Bund, Ländern und Kommunen
+samenvatting: >-
+  Ein Sondervermögen von bis zu 500 Milliarden Euro für Infrastruktur steht im Grundgesetz, davon 100 Milliarden
+  Euro für die Länder. Der „Deutschlandfonds“ der Koalition ist ein anderes Instrument.
+citaat: "Mit dem Deutschlandfonds werden wir in Bund, Ländern und Kommunen die notwendigen Mittel für die Investitionen in diese Zukunft mobilisieren."
+programma:
+  pagina: 10
+  hoofdstuk: Präambel
+criterium: >-
+  Umgesetzt, wenn per Gesetz ein Investitionsfonds außerhalb des normalen Haushalts besteht, der Bund, Ländern
+  und Kommunen Geld für Infrastruktur gibt. Teilweise umgesetzt, wenn es einen solchen Fonds mit anderem
+  Aufbau oder ohne den Teil für Länder und Kommunen gibt.
+akkoord:
+  oordeel: aangepast
+  citaat: "Wir werden einen Deutschlandfonds einrichten. Dieser ist das Dach, unter dem wir die Kraft der privaten Finanzmärkte mit dem langfristig strategischen Vorgehen des Investors Staat verbinden."
+  zeile: "111–116"
+  pagina: "4–5"
+waaromAnders:
+  reden: formatie
+  zekerheid: aannemelijk
+  bron: "Koalitionsvertrag, Zeilen 111–116: Der Deutschlandfonds der Koalition setzt auf privates Kapital, nicht auf einen öffentlichen Fonds für Länder und Kommunen."
+  url: https://www.cdu.de/app/uploads/2025/04/Koalitionsvertrag-%E2%80%93-barrierefreie-Version.pdf
+toelichting: >-
+  Am 18. März 2025, noch im alten Bundestag, beschloss der Bundestag eine Änderung des Grundgesetzes (Art. 143h).
+  Sie schafft ein Sondervermögen „mit einem Volumen von bis zu 500 Milliarden Euro“; 100 Milliarden Euro stehen
+  den Ländern zur Verfügung. Die Grünen stimmten bis auf eine Abgeordnete zu. Kommunen haben im Grundgesetz
+  keinen eigenen Anteil. Der „Deutschlandfonds“ der Bundesregierung startete im Dezember 2025 und ist laut
+  Bundesregierung „weder um einen Staatsfonds noch um einen Fonds im finanzwirtschaftlichen Sinne“.
+  Offene Frage für die Bewertung: Zählt ein ähnliches Instrument mit anderem Namen?
+kern: true
+kernReden: Steht in der Präambel (Vorspann), S. 10. Nr. 1 der prüfbaren Versprechen aus Vorspann und Kapitelanfängen.
+bronnen:
+  - soort: programma
+    titel: "Zusammen wachsen. Regierungsprogramm 2025, S. 10 und S. 36"
+    url: https://cms.gruene.de/uploads/assets/Regierungsprogramm_DIGITAL_DINA5.pdf
+    datum: ''
+    geraadpleegd: 2026-11-14
+  - soort: akkoord
+    titel: "Koalitionsvertrag „Verantwortung für Deutschland“, Zeilen 111–116"
+    url: https://www.cdu.de/app/uploads/2025/04/Koalitionsvertrag-%E2%80%93-barrierefreie-Version.pdf
+    datum: ''
+    geraadpleegd: 2026-11-14
+  - soort: plenarprotokoll
+    titel: "Plenarprotokoll 20/214, S. 27795 (Änderung des Grundgesetzes, Art. 109, 115, 143h)"
+    url: https://dserver.bundestag.de/btp/20/20214.pdf
+    datum: 2025-03-18
+    geraadpleegd: 2026-11-14
+    bewijs: indirect
+  - soort: bgbl
+    titel: "Gesetz zur Änderung des Grundgesetzes, BGBl. 2025 I Nr. 94 (Art. 143h GG)"
+    url: https://www.recht.bund.de/eli/bund/BGBl_1/2025/94
+    datum: 2025-03-24
+    geraadpleegd: 2026-11-14
+    bewijs: direct
+    citaat: "Aus dem Sondervermögen … stehen den Ländern 100 Milliarden Euro auch für Investitionen der Länder in deren Infrastruktur zur Verfügung."
+  - soort: drucksache
+    titel: "Antwort der Bundesregierung zum Deutschlandfonds, Drucksache 21/6787"
+    url: https://dserver.bundestag.de/btd/21/067/2106787.pdf
+    datum: 2026-06-29
+    geraadpleegd: 2026-11-14
+    bewijs: indirect
+    citaat: "Der Deutschlandfonds ist im Dezember 2025 gestartet"
+bijgewerkt: 2026-11-14
