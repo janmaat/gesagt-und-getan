@@ -1,0 +1,33 @@
+name: Offene Daten aktualisieren
+
+# Holt einmal pro Woche Abgeordnete, Abstimmungen, Tagesordnung, DIP und Bundesgesetzblatt.
+# Ändert nur Dateien in src/data/, nie eine Bewertung. Bewertungen ändert nur ein Mensch.
+on:
+  schedule:
+    - cron: '17 4 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  daten:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run daten
+      - run: npm run build && npm run pruefen
+      - name: Änderungen speichern
+        run: |
+          if [ -n "$(git status --porcelain src/data)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add src/data
+            git commit -m "Offene Daten aktualisiert"
+            git push
+          fi

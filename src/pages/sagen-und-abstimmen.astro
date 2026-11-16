@@ -1,0 +1,39 @@
+---
+import Basis from '../layouts/Basis.astro';
+import { parteien, versprechen } from '../lib/daten';
+import { datumLang } from '../lib/begriffe';
+const ps = await parteien();
+const vs = await versprechen();
+const faelle = vs.flatMap((v) => v.data.stemmingen.map((s) => ({ v, s })));
+const name = (id: string) => ps.find((p) => p.id === id)?.data.kort ?? id;
+const RICHTUNG = { voor: 'wie versprochen', tegen: 'anders als versprochen', onduidelijk: 'nicht eindeutig' } as const;
+---
+<Basis titel="Sagen und Abstimmen">
+  <h1>Sagen und Abstimmen</h1>
+  <p class="einleitung">Stimmt eine Fraktion im Bundestag so ab, wie ihre Partei es im Wahlprogramm versprochen hat?</p>
+  <p>Wir schauen dafür auf Abstimmungen, die direkt ein Versprechen betreffen, das wir verfolgen: ein Gesetz, einen Antrag oder einen Änderungsantrag. Für jede Partei gilt dieselbe Frage, für Regierung und Opposition.</p>
+  <h2>Woher wir wissen, wie eine Fraktion gestimmt hat</h2>
+  <ul>
+    <li><strong>Namentliche Abstimmung:</strong> Die Stimme jedes Abgeordneten steht in einer Liste des Bundestags. Abweichungen innerhalb einer Fraktion sind sichtbar.</li>
+    <li><strong>Handzeichen oder Aufstehen:</strong> So fallen die meisten Beschlüsse. Wie die Fraktionen gestimmt haben, steht dann nur als Text im Plenarprotokoll. Einzelne Abweichungen werden dort manchmal erwähnt, aber ohne Namen. Wir lesen jede dieser Stellen selbst nach.</li>
+  </ul>
+  <p>Ein angenommener Antrag ist eine Aufforderung an die Regierung. Er zählt deshalb nicht als Umsetzung eines Versprechens, die Abstimmung zeigt aber, wie eine Fraktion sich verhält.</p>
+  <h2>Abstimmungen zu verfolgten Versprechen</h2>
+  {faelle.length === 0 ? <p>Noch keine veröffentlicht.</p> : (
+    <div class="tabelle"><table>
+      <thead><tr><th>Datum</th><th>Versprechen</th><th>Abstimmung</th><th>Partei des Versprechens</th><th>Ergebnis</th></tr></thead>
+      <tbody>
+        {faelle.map(({ v, s }) => (
+          <tr>
+            <td>{datumLang(s.datum)}</td>
+            <td><a href={`/versprechen/${v.id}/`}>{v.data.titel}</a></td>
+            <td>{s.titel}{s.drucksache && ` (Drucksache ${s.drucksache})`}<br /><span class="klein"><a href={s.bron}>{s.wijze === 'namentlich' ? 'namentlich' : 'Handzeichen'}{s.bronSeite && `, S. ${s.bronSeite}`}</a></span></td>
+            <td>{name(v.data.partij.id)}: {RICHTUNG[s.richting]}</td>
+            <td>{s.uitslag === 'aangenomen' ? 'angenommen' : 'abgelehnt'}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table></div>
+  )}
+  <p>Alle namentlichen Abstimmungen dieser Wahlperiode, auch ohne Bezug zu einem Versprechen: <a href="/abstimmungen/">Abstimmungen</a>.</p>
+</Basis>

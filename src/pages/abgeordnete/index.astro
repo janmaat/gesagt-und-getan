@@ -1,0 +1,57 @@
+---
+import Basis from '../../layouts/Basis.astro';
+import { abgeordnete, FRAKTIONEN } from '../../lib/offen';
+import { datumLang } from '../../lib/begriffe';
+const liste = abgeordnete.abgeordnete;
+const laender = [...new Set(liste.map((a) => a.land))].sort((a, b) => a.localeCompare(b, 'de'));
+const anzahl = (id: string) => liste.filter((a) => a.partei === id).length;
+---
+<Basis titel="Abgeordnete" breit>
+  <h1>Abgeordnete</h1>
+  <p>Der 21. Bundestag hat {liste.length} Abgeordnete. Die Liste zeigt, zu welcher Fraktion sie heute gehören und aus welchem Land sie kommen.</p>
+  <ul class="meta">{FRAKTIONEN.map((f) => <li>{f.name}: {anzahl(f.id)}</li>)}</ul>
+  <form class="filter" id="filter" aria-label="Abgeordnete filtern">
+    <label>Fraktion
+      <select name="partei"><option value="">Alle</option>{FRAKTIONEN.map((f) => <option value={f.id}>{f.name}</option>)}</select>
+    </label>
+    <label>Land
+      <select name="land"><option value="">Alle</option>{laender.map((l) => <option value={l}>{l}</option>)}</select>
+    </label>
+    <label>Mandat
+      <select name="direkt"><option value="">Alle</option><option value="ja">Direkt gewählt</option><option value="nein">Über die Landesliste</option></select>
+    </label>
+  </form>
+  <p class="leise" id="anzahl" aria-live="polite">{liste.length} Abgeordnete</p>
+  <div class="tabelle"><table>
+    <thead><tr><th>Name</th><th>Fraktion</th><th>Land</th><th>Mandat</th></tr></thead>
+    <tbody id="liste">
+      {liste.map((a) => (
+        <tr data-partei={a.partei} data-land={a.land} data-direkt={a.direkt ? 'ja' : 'nein'}>
+          <td><a href={a.url}>{a.sortname}</a></td>
+          <td>{a.fraktion}</td>
+          <td>{a.land}</td>
+          <td>{a.direkt ? 'direkt' : 'Liste'}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table></div>
+  <p class="klein">Quelle: <a href={abgeordnete.quelle}>Sitzverteilung des Deutschen Bundestags</a>, Stand {datumLang(abgeordnete.stand)}. Die Namen führen zur Biografie auf bundestag.de.</p>
+</Basis>
+<script>
+  const form = document.getElementById('filter') as HTMLFormElement | null;
+  const liste = document.getElementById('liste');
+  const anzahl = document.getElementById('anzahl');
+  if (form && liste && anzahl) {
+    const anwenden = () => {
+      const f = Object.fromEntries(new FormData(form)) as Record<string, string>;
+      let n = 0;
+      for (const z of Array.from(liste.children) as HTMLElement[]) {
+        const passt = Object.entries(f).every(([k, w]) => !w || z.dataset[k] === w);
+        z.hidden = !passt;
+        if (passt) n++;
+      }
+      anzahl.textContent = `${n} Abgeordnete`;
+    };
+    form.addEventListener('change', anwenden);
+  }
+</script>

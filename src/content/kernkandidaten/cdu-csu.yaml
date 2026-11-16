@@ -1,0 +1,14 @@
+partij: cdu-csu
+gezaehlt: "38 prüfbare Versprechen (dazu 16 Zweifelsfälle), wenn die vorangestellte Kurzfassung als Vorspann zählt. Ohne die Kurzfassung: keine."
+offen: Zählt die Kurzfassung vor dem ersten Kapitel als Vorspann? (Entscheidung steht aus.)
+kandidaten:
+  - { nr: 1, citaat: "Wir entlasten vor allem Menschen mit niedrigen und mittleren Einkommen. Dafür passen wir den Einkommensteuertarif an. Unser Ziel für die Sozialversicherungsbeiträge: Wir wollen uns wieder auf die 40 Prozent hinbewegen.", pagina: 1, pdfPagina: 3, kapitel: "Kurzfassung – Für ein neues Wohlstandsversprechen" }
+  - { nr: 2, citaat: "Wir stellen Überstundenzuschläge bei Vollzeitarbeit steuerfrei.", pagina: 1, pdfPagina: 3, kapitel: "Kurzfassung – Für ein neues Wohlstandsversprechen" }
+  - { nr: 3, citaat: "Wir erhöhen die Pendlerpauschale.", pagina: 1, pdfPagina: 3, kapitel: "Kurzfassung – Für ein neues Wohlstandsversprechen", versprechen: cdu-csu-pendlerpauschale }
+  - { nr: 4, citaat: "Künftig soll für alle Unternehmen anstelle der täglichen eine wöchentliche Höchstarbeitszeit gelten.", pagina: 1, pdfPagina: 3, kapitel: "Kurzfassung – Für ein neues Wohlstandsversprechen" }
+  - { nr: 5, citaat: "Für ausländische Fachkräfte richten wir eine digitale „Work-and-Stay-Agentur“ ein.", pagina: 1, pdfPagina: 3, kapitel: "Kurzfassung – Für ein neues Wohlstandsversprechen" }
+  - { nr: 6, citaat: "Wir senken die Unternehmenssteuerbelastung auf maximal 25 Prozent, schaffen den Rest-Soli ab", pagina: 2, pdfPagina: 4, kapitel: "Kurzfassung – Aufbruch für die Wirtschaft" }
+  - { nr: 7, citaat: "Das nationale Lieferkettengesetz schaffen wir ab.", pagina: 2, pdfPagina: 4, kapitel: "Kurzfassung – Aufbruch für die Wirtschaft" }
+  - { nr: 8, citaat: "Wir senken die Stromsteuer und die Netzentgelte.", pagina: 2, pdfPagina: 4, kapitel: "Kurzfassung – Energie bezahlbar machen" }
+  - { nr: 9, citaat: "Wir schaffen das Heizungsgesetz der Ampel ab.", pagina: 2, pdfPagina: 4, kapitel: "Kurzfassung – Energie bezahlbar machen" }
+  - { nr: 10, citaat: "Dazu richten wir ein Bundesdigitalministerium ein.", pagina: 2, pdfPagina: 4, kapitel: "Kurzfassung – Deutschland fit machen für Innovationen" }

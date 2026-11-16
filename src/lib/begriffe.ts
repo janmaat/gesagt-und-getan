@@ -102,6 +102,13 @@ export function datumLang(iso: string): string {
   return `${t}. ${MONATE[m - 1]} ${j}`;
 }
 
+/** 2026-11-14 → „14.11.2026“ */
+export function datumKurz(iso: string): string {
+  if (!iso) return '';
+  const [j, m, t] = iso.split('-');
+  return `${t}.${m}.${j}`;
+}
+
 export function zahl(n: number): string {
   return new Intl.NumberFormat('de-DE').format(n);
 }

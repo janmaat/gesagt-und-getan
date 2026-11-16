@@ -1,0 +1,7 @@
+partij: afd
+gezaehlt: "4 prüfbare Versprechen (dazu 6 Zweifelsfälle). Das Programm hat keinen Vorspann, fünf von zwölf Kapitelanfängen sind leer."
+kandidaten:
+  - { nr: 1, citaat: "… die Schuldenbremse einzuhalten und Verschuldung zurückführen.", pagina: 54, pdfPagina: 55, kapitel: "Finanzen und Steuern" }
+  - { nr: 2, citaat: "Die AfD wird eine deutliche Kehrtwende in der bisherigen Migrationspolitik einleiten und die Staatsgrenzen wieder kontrollieren.", pagina: 100, pdfPagina: 101, kapitel: "Asyl- und Migrationspolitik" }
+  - { nr: 3, citaat: "Wir werden vollziehbar ausreisepflichtige Personen konsequent abschieben und bestehende Fehlanreize (Bürgergeld, Bleiberechte für Ausreisepflichtige, Turboeinbürgerung) abstellen.", pagina: 101, pdfPagina: 102, kapitel: "Asyl- und Migrationspolitik", versprechen: afd-turboeinbuergerung }
+  - { nr: 4, citaat: "Hierzu sind umgehend Widerrufsverfahren einzuleiten und Verhandlungen mit den Herkunftsländern aufzunehmen.", pagina: 101, pdfPagina: 102, kapitel: "Asyl- und Migrationspolitik", hinweis: "Bezieht sich auf Geflüchtete aus Syrien." }

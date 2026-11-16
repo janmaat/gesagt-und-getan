@@ -279,4 +279,31 @@ const korrekturen = defineCollection({
   }),
 });
 
-export const collections = { parteien, versprechen, begriffe, korrekturen };
+/**
+ * Ergebnis der Kernregel pro Partei: die ersten zehn prüfbaren Versprechen aus Vorspann und
+ * Kapitelanfängen. Arbeitsliste für die Redaktion; erscheint nur in der Vorschau.
+ */
+const kernkandidaten = defineCollection({
+  loader: glob({ pattern: '**/*.yaml', base: './src/content/kernkandidaten' }),
+  schema: z.object({
+    partij: reference('parteien'),
+    gezaehlt: z.string().min(1),
+    offen: z.string().optional(),
+    kandidaten: z
+      .array(
+        z.object({
+          nr: z.number().int().positive(),
+          citaat: z.string().min(1),
+          pagina: z.number().int().positive(),
+          pdfPagina: z.number().int().positive().optional(),
+          kapitel: z.string().min(1),
+          zweifel: z.string().optional(),
+          hinweis: z.string().optional(),
+          versprechen: reference('versprechen').optional(),
+        }),
+      )
+      .max(11),
+  }),
+});
+
+export const collections = { parteien, versprechen, begriffe, korrekturen, kernkandidaten };

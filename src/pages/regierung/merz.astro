@@ -1,0 +1,26 @@
+---
+import Basis from '../../layouts/Basis.astro';
+import Karte from '../../components/Karte.astro';
+import { parteien, versprechen, zaehle } from '../../lib/daten';
+import { STATUS_LABEL, STATUS_REIHENFOLGE } from '../../lib/begriffe';
+const ps = (await parteien()).filter((p) => p.data.regering);
+const vs = (await versprechen()).filter((v) => ps.some((p) => p.id === v.data.partij.id));
+const parteiVon = new Map(ps.map((p) => [p.id, p]));
+---
+<Basis titel="Was hat die Regierung erreicht?">
+  <h1>Was hat die Regierung Merz erreicht?</h1>
+  <p>Seit Mai 2025 regieren CDU, CSU und SPD gemeinsam; Bundeskanzler ist Friedrich Merz. Ihre Pläne stehen im Koalitionsvertrag „Verantwortung für Deutschland“. Wir messen die Regierungsparteien trotzdem an ihren eigenen Wahlprogrammen.</p>
+  <p class="klein">Koalitionsvertrag: <a href="https://www.cdu.de/app/uploads/2025/04/Koalitionsvertrag-%E2%80%93-barrierefreie-Version.pdf">Fassung mit Zeilennummern (PDF, cdu.de)</a>. Unterzeichnet am 5. Mai 2025.</p>
+  {ps.map((p) => {
+    const e = vs.filter((v) => v.data.partij.id === p.id);
+    const z = zaehle(e);
+    return (
+      <section>
+        <h2><a href={`/parteien/${p.id}/`}>{p.data.naam}</a></h2>
+        {e.length === 0 ? <p>Noch keine Versprechen veröffentlicht.</p> : <ul>{STATUS_REIHENFOLGE.filter((s) => z[s]).map((s) => <li><a href={`/versprechen/?partei=${p.id}&status=${s}`}>{STATUS_LABEL[s]}</a>: {z[s]} von {e.length}</li>)}</ul>}
+      </section>
+    );
+  })}
+  {vs.length > 0 && (<><h2>Alle Versprechen der Regierungsparteien</h2><ul class="karten">{vs.map((v) => <Karte v={v} partei={parteiVon.get(v.data.partij.id)} />)}</ul></>)}
+  <p class="klein">Die Opposition messen wir genauso: <a href="/parteien/">alle Parteien</a>.</p>
+</Basis>

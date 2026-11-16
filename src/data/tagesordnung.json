@@ -1,0 +1,336 @@
+{
+  "stand": "2026-11-16",
+  "quelle": "https://www.bundestag.de/parlament/plenum/tagesordnungen",
+  "sitzungen": [
+    {
+      "nummer": 110,
+      "datum": "24. November 2026",
+      "punkte": [
+        {
+          "zeit": "10:00",
+          "top": "",
+          "titel": "Sitzungseröffnung",
+          "drucksachen": [],
+          "status": "folgt"
+        },
+        {
+          "zeit": "10:00",
+          "top": "I",
+          "titel": "Haushaltsgesetz 2027",
+          "drucksachen": [
+            "21/7300",
+            "21/7302",
+            "21/7650",
+            "21/7301",
+            "21/9064"
+          ],
+          "status": "folgt"
+        },
+        {
+          "zeit": "10:05",
+          "top": "Epl 01, 02, 03",
+          "titel": "Bundespräsident und Bundespräsidialamt, Bundestag, Bundesrat",
+          "drucksachen": [
+            "21/9062",
+            "21/9002"
+          ],
+          "status": "folgt"
+        },
+        {
+          "zeit": "10:10",
+          "top": "Epl 08, 20",
+          "titel": "Finanzen, Bundesrechnungshof",
+          "drucksachen": [
+            "21/9008",
+            "21/9062"
+          ],
+          "status": "folgt"
+        },
+        {
+          "zeit": "11:55",
+          "top": "Epl 24",
+          "titel": "Digitales und Staatsmodernisierung",
+          "drucksachen": [
+            "21/9062"
+          ],
+          "status": "folgt"
+        },
+        {
+          "zeit": "13:40",
+          "top": "Epl 16",
+          "titel": "Umwelt, Klimaschutz, Naturschutz und nukleare Sicherheit",
+          "drucksachen": [
+            "21/9062"
+          ],
+          "status": "folgt"
+        },
+        {
+          "zeit": "15:25",
+          "top": "Epl 15",
+          "titel": "Gesundheit",
+          "drucksachen": [
+            "21/9062"
+          ],
+          "status": "folgt"
+        },
+        {
+          "zeit": "17:10",
+          "top": "Epl 30",
+          "titel": "Forschung, Technologie und Raumfahrt",
+          "drucksachen": [
+            "21/9062"
+          ],
+          "status": "folgt"
+        },
+        {
+          "zeit": "18:50",
+          "top": "",
+          "titel": "Sitzungsende",
+          "drucksachen": [],
+          "status": "folgt"
+        }
+      ]
+    },
+    {
+      "nummer": 111,
+      "datum": "25. November 2026",
+      "punkte": [
+        {
+          "zeit": "09:00",
+          "top": "",
+          "titel": "Sitzungseröffnung",
+          "drucksachen": [],
+          "status": "folgt"
+        },
+        {
+          "zeit": "09:00",
+          "top": "Epl 04",
+          "titel": "Bundeskanzler und Bundeskanzleramt, Unabhängiger Kontrollrat",
+          "drucksachen": [
+            "21/9062"
+          ],
+          "status": "folgt"
+        },
+        {
+          "zeit": "13:00",
+          "top": "Epl 05",
+          "titel": "Auswärtiges Amt",
+          "drucksachen": [
+            "21/9062"
+          ],
+          "status": "folgt"
+        },
+        {
+          "zeit": "14:45",
+          "top": "Epl 14",
+          "titel": "Verteidigung",
+          "drucksachen": [
+            "21/9062"
+          ],
+          "status": "folgt"
+        },
+        {
+          "zeit": "16:30",
+          "top": "Epl 23",
+          "titel": "Wirtschaftliche Zusammenarbeit und Entwicklung",
+          "drucksachen": [
+            "21/9062"
+          ],
+          "status": "folgt"
+        },
+        {
+          "zeit": "18:15",
+          "top": "",
+          "titel": "Sitzungsende",
+          "drucksachen": [],
+          "status": "folgt"
+        }
+      ]
+    },
+    {
+      "nummer": 112,
+      "datum": "26. November 2026",
+      "punkte": [
+        {
+          "zeit": "09:00",
+          "top": "",
+          "titel": "Sitzungseröffnung",
+          "drucksachen": [],
+          "status": "folgt"
+        },
+        {
+          "zeit": "09:00",
+          "top": "Epl 06, 21",
+          "titel": "Inneres, Datenschutz, Informationsfreiheit",
+          "drucksachen": [
+            "21/9062"
+          ],
+          "status": "folgt"
+        },
+        {
+          "zeit": "10:45",
+          "top": "Epl 07, 19",
+          "titel": "Justiz und Verbraucherschutz, Bundesverfassungsgericht",
+          "drucksachen": [
+            "21/9062"
+          ],
+          "status": "folgt"
+        },
+        {
+          "zeit": "12:30",
+          "top": "IV",
+          "titel": "Überweisung im vereinfachten Verfahren",
+          "drucksachen": [],
+          "status": "folgt"
+        },
+        {
+          "zeit": "12:35",
+          "top": "V",
+          "titel": "Abschließende Beratungen ohne Aussprache",
+          "drucksachen": [
+            "21/8373",
+            "21/1577",
+            "21/6659",
+            "21/9119",
+            "21/9120",
+            "21/9121",
+            "21/9122",
+            "21/9123",
+            "21/9124",
+            "21/9125",
+            "21/9126",
+            "21/9127",
+            "21/9128",
+            "21/9129",
+            "21/9130",
+            "21/9131",
+            "21/9132",
+            "21/9133"
+          ],
+          "status": "folgt"
+        },
+        {
+          "zeit": "12:50",
+          "top": "Epl 09",
+          "titel": "Wirtschaft und Energie",
+          "drucksachen": [
+            "21/9062"
+          ],
+          "status": "folgt"
+        },
+        {
+          "zeit": "14:35",
+          "top": "Epl 25",
+          "titel": "Wohnen, Stadtentwicklung und Bauwesen",
+          "drucksachen": [
+            "21/9062"
+          ],
+          "status": "folgt"
+        },
+        {
+          "zeit": "16:20",
+          "top": "Epl 10",
+          "titel": "Landwirtschaft, Ernährung und Heimat",
+          "drucksachen": [
+            "21/9062"
+          ],
+          "status": "folgt"
+        },
+        {
+          "zeit": "18:05",
+          "top": "Epl 17",
+          "titel": "Bildung, Familie, Senioren, Frauen und Jugend",
+          "drucksachen": [
+            "21/9062"
+          ],
+          "status": "folgt"
+        },
+        {
+          "zeit": "19:50",
+          "top": "",
+          "titel": "Sitzungsende",
+          "drucksachen": [],
+          "status": "folgt"
+        }
+      ]
+    },
+    {
+      "nummer": 113,
+      "datum": "27. November 2026",
+      "punkte": [
+        {
+          "zeit": "09:00",
+          "top": "",
+          "titel": "Sitzungseröffnung",
+          "drucksachen": [],
+          "status": "folgt"
+        },
+        {
+          "zeit": "09:00",
+          "top": "Epl 11",
+          "titel": "Arbeit und Soziales",
+          "drucksachen": [
+            "21/9062"
+          ],
+          "status": "folgt"
+        },
+        {
+          "zeit": "10:45",
+          "top": "Epl 12",
+          "titel": "Verkehr",
+          "drucksachen": [
+            "21/9062"
+          ],
+          "status": "folgt"
+        },
+        {
+          "zeit": "12:30",
+          "top": "Epl 32, 60",
+          "titel": "Bundesschuld, Allgemeine Finanzverwaltung",
+          "drucksachen": [
+            "21/9032",
+            "21/9060"
+          ],
+          "status": "folgt"
+        },
+        {
+          "zeit": "12:35",
+          "top": "I",
+          "titel": "Haushaltsgesetz 2027 (2. Beratung), Finanzplan 2026 bis 2030",
+          "drucksachen": [
+            "21/9062",
+            "21/9063"
+          ],
+          "status": "folgt"
+        },
+        {
+          "zeit": "12:40",
+          "top": "II, III",
+          "titel": "Haushaltsbegleitgesetz 2027, Haushaltsgesetz 2027 (3. Beratung)",
+          "drucksachen": [
+            "21/7860",
+            "21/8534",
+            "21/7300",
+            "21/7302",
+            "21/7650",
+            "21/9002",
+            "21/9008",
+            "21/9032",
+            "21/9060",
+            "21/9061",
+            "21/9062",
+            "21/9063"
+          ],
+          "status": "folgt"
+        },
+        {
+          "zeit": "14:55",
+          "top": "",
+          "titel": "Sitzungsende",
+          "drucksachen": [],
+          "status": "folgt"
+        }
+      ]
+    }
+  ]
+}

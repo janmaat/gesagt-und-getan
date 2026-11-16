@@ -7,14 +7,18 @@ interface Props {
   beschreibung?: string;
   /** Seite in die Suche aufnehmen (Pagefind). */
   suchbar?: boolean;
+  /** Breitere Seite für große Tabellen. */
+  breit?: boolean;
 }
-const { titel, beschreibung = 'Was aus Wahlversprechen wird: Wahlprogramm, Koalitionsvertrag und Umsetzung für alle Parteien im Bundestag, immer mit Quelle.', suchbar = true } = Astro.props;
+const { titel, beschreibung = 'Was aus Wahlversprechen wird: Wahlprogramm, Koalitionsvertrag und Umsetzung für alle Parteien im Bundestag, immer mit Quelle.', suchbar = true, breit = false } = Astro.props;
 const seitentitel = titel === 'Startseite' ? 'Gesagt und getan?' : `${titel} | Gesagt und getan?`;
 const pfad = Astro.url.pathname;
 const navi = [
   { href: '/versprechen/', text: 'Versprechen' },
   { href: '/parteien/', text: 'Parteien' },
   { href: '/themen/', text: 'Themen' },
+  { href: '/abstimmungen/', text: 'Abstimmungen' },
+  { href: '/diese-woche/', text: 'Diese Woche' },
   { href: '/methode/', text: 'So arbeiten wir' },
   { href: '/suche/', text: 'Suche' },
 ];
@@ -28,6 +32,7 @@ const navi = [
     <meta name="description" content={beschreibung} />
     <link rel="canonical" href={new URL(pfad, Astro.site)} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate" type="application/rss+xml" title="Gesagt und getan?" href="/feed.xml" />
     {VORSCHAU && <meta name="robots" content="noindex, nofollow" />}
   </head>
   <body>
@@ -56,13 +61,18 @@ const navi = [
         </nav>
       </div>
     </header>
-    <main id="inhalt" class="breite" data-pagefind-body={suchbar ? '' : undefined}>
+    <main id="inhalt" class:list={["breite", { "breite-gross": breit }]} data-pagefind-body={suchbar ? '' : undefined}>
       <slot />
     </main>
     <footer class="fuss">
       <div class="breite">
         <p>Gesagt und getan? ist unabhängig und gehört zu keiner Partei. Zu jeder Bewertung steht die Quelle.</p>
         <ul class="fuss-links">
+          <li><a href="/aktuell/">Aktuell</a></li>
+          <li><a href="/regierung/merz/">Regierung Merz</a></li>
+          <li><a href="/sagen-und-abstimmen/">Sagen und Abstimmen</a></li>
+          <li><a href="/abgeordnete/">Abgeordnete</a></li>
+          <li><a href="/erklaert/">Einfach erklärt</a></li>
           <li><a href="/ueber-uns/">Über uns</a></li>
           <li><a href="/finanzierung/">Wer uns bezahlt</a></li>
           <li><a href="/korrekturen/">Korrekturen</a></li>

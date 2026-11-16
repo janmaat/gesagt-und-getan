@@ -29,7 +29,7 @@ function text(seite) {
   const m = seite.match(/<main[^>]*>([\s\S]*?)<\/main>/);
   if (!m) return '';
   return m[1]
-    .replace(/<(script|style)[\s\S]*?<\/\1>/g, ' ')
+    .replace(/<(script|style|pre)[\s\S]*?<\/\1>/g, ' ')
     .replace(/<\/(p|li|h[1-6]|dt|dd|td|th|blockquote|tr|option|label|span)>/g, '\n')
     .replace(/<br\s*\/?>/g, '\n')
     .replace(/<[^>]+>/g, '')
@@ -53,11 +53,14 @@ async function pruefe(t) {
 }
 
 // Gleiche Texte (Kopf, Fuß, wiederkehrende Sätze) nur einmal prüfen.
+// Seiten mit Texten Dritter (Titel von Abstimmungen, Tagesordnung, Namen) nicht prüfen.
+const FREMD = [/^\/abstimmungen\//, /^\/abgeordnete\//, /^\/diese-woche\//, /^\/aktuell\//, /^\/einbetten\//];
 const gesehen = new Set();
 const bericht = [];
 let anfragen = 0;
 for await (const datei of html(DIST)) {
   const seite = '/' + relative(DIST, datei).replace(/index\.html$/, '');
+  if (FREMD.some((m) => m.test(seite))) continue;
   const zeilen = text(await readFile(datei, 'utf8')).split('\n').filter((z) => !gesehen.has(z));
   zeilen.forEach((z) => gesehen.add(z));
   let block = '';

@@ -1,0 +1,27 @@
+---
+import Basis from '../layouts/Basis.astro';
+import { abstimmungen, bgbl } from '../lib/offen';
+import { versprechen } from '../lib/daten';
+import { STATUS_LABEL, datumLang } from '../lib/begriffe';
+const vs = await versprechen();
+const wechsel = vs
+  .flatMap((v) => v.data.geschiedenis.map((g) => ({ ...g, v })))
+  .sort((a, b) => b.datum.localeCompare(a.datum))
+  .slice(0, 10);
+const neueVersprechen = [...vs].sort((a, b) => b.data.bijgewerkt.localeCompare(a.data.bijgewerkt)).slice(0, 5);
+---
+<Basis titel="Aktuell">
+  <h1>Aktuell</h1>
+  <h2>Neue Bewertungen</h2>
+  {wechsel.length === 0 && neueVersprechen.length === 0 && <p>Noch keine veröffentlicht.</p>}
+  {wechsel.length > 0 && <ul>{wechsel.map((w) => <li>{datumLang(w.datum)}: <a href={`/versprechen/${w.v.id}/`}>{w.v.data.titel}</a> – {STATUS_LABEL[w.van]} → {STATUS_LABEL[w.naar]}</li>)}</ul>}
+  {wechsel.length === 0 && neueVersprechen.length > 0 && <ul>{neueVersprechen.map((v) => <li>{datumLang(v.data.bijgewerkt)}: <a href={`/versprechen/${v.id}/`}>{v.data.titel}</a></li>)}</ul>}
+
+  <h2>Letzte namentliche Abstimmungen</h2>
+  <ul>{abstimmungen.abstimmungen.slice(0, 8).map((a) => <li>{datumLang(a.datum)}: <a href={`/abstimmungen/${a.id}/`}>{a.titel}</a> ({a.angenommen ? 'angenommen' : 'abgelehnt'})</li>)}</ul>
+  <p><a href="/abstimmungen/">Alle Abstimmungen</a></p>
+
+  <h2>Neu im Bundesgesetzblatt</h2>
+  <ul>{bgbl.eintraege.filter((e) => e.typ === 'Gesetz').slice(0, 10).map((e) => <li>{datumLang(e.datum)}: <a href={e.url}>{e.kurz || e.titel}</a> <span class="leise klein">({e.fundstelle})</span></li>)}</ul>
+  <p class="klein">Nur Gesetze, ohne Verordnungen. Quelle: <a href="https://www.recht.bund.de/">recht.bund.de</a>, abgerufen am {datumLang(bgbl.stand)}.</p>
+</Basis>

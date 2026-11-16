@@ -1,0 +1,30 @@
+---
+import '../../../styles/basis.css';
+import { getEntry } from 'astro:content';
+import { versprechen } from '../../../lib/daten';
+import { STATUS_LABEL, datumLang } from '../../../lib/begriffe';
+export async function getStaticPaths() {
+  return (await versprechen()).map((v) => ({ params: { id: v.id }, props: { v } }));
+}
+const { v } = Astro.props;
+const p = (await getEntry(v.data.partij))!;
+const url = `https://gesagtundgetan.de/versprechen/${v.id}/`;
+---
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>{p.data.kort}: {v.data.titel} | Gesagt und getan?</title>
+    <style>body{margin:0;background:var(--flaeche)} .einbettung{padding:12px 14px;border:1px solid var(--linie);border-radius:6px;font-size:15px;line-height:1.45}</style>
+  </head>
+  <body>
+    <div class="einbettung">
+      <p class="meta" style="margin:0">{p.data.naam}</p>
+      <p style="margin:.3rem 0;font-weight:700">{v.data.titel}</p>
+      <p style="margin:.3rem 0"><span class={`status status-${v.data.status}`}>{STATUS_LABEL[v.data.status]}</span> <span class="klein">Stand {datumLang(v.data.bijgewerkt)}</span></p>
+      <p style="margin:.3rem 0" class="klein"><a href={url} target="_blank" rel="noopener">Quellen und Begründung bei „Gesagt und getan?“</a></p>
+    </div>
+  </body>
+</html>

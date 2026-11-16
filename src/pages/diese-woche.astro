@@ -1,0 +1,47 @@
+---
+import Basis from '../layouts/Basis.astro';
+import { tagesordnung, isoAusDeutsch } from '../lib/offen';
+import { datumLang } from '../lib/begriffe';
+import { versprechen } from '../lib/daten';
+const vs = await versprechen();
+// Versprechen, deren Quellen eine Drucksache auf der Tagesordnung nennen
+const zuDrucksache = new Map<string, typeof vs>();
+for (const v of vs) for (const b of v.data.bronnen) {
+  const m = b.titel.match(/Drucksache (\d+\/\d+)/);
+  if (m) zuDrucksache.set(m[1], [...(zuDrucksache.get(m[1]) ?? []), v]);
+}
+const sitzungen = tagesordnung.sitzungen;
+---
+<Basis titel="Diese Woche im Bundestag">
+  <h1>Diese Woche im Bundestag</h1>
+  {sitzungen.length === 0 ? <p>In dieser Woche tagt der Bundestag nicht.</p> : (
+    <>
+      <p>Der Bundestag berät in seiner nächsten Sitzungswoche diese Punkte. Steht ein Punkt in Verbindung mit einem Versprechen, das wir verfolgen, steht der Link dabei.</p>
+      {sitzungen.map((s) => (
+        <section>
+          <h2>{s.datum} <span class="leise klein">({s.nummer}. Sitzung)</span></h2>
+          <div class="tabelle"><table>
+            <thead><tr><th>Zeit</th><th>Punkt</th><th>Thema</th></tr></thead>
+            <tbody>
+              {s.punkte.map((p) => {
+                const passend = p.drucksachen.flatMap((d) => zuDrucksache.get(d) ?? []);
+                return (
+                  <tr>
+                    <td>{p.zeit}</td>
+                    <td>{p.top}</td>
+                    <td>
+                      {p.titel}
+                      {p.drucksachen.length > 0 && <span class="klein leise"><br />Drucksache {p.drucksachen.join(', ')}</span>}
+                      {passend.map((v) => <><br /><a href={`/versprechen/${v.id}/`}>→ Versprechen: {v.data.titel}</a></>)}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table></div>
+        </section>
+      ))}
+    </>
+  )}
+  <p class="klein">Quelle: <a href={tagesordnung.quelle}>Tagesordnungen des Deutschen Bundestags</a>, abgerufen am {datumLang(tagesordnung.stand)}. Die Tagesordnung kann sich kurzfristig ändern.</p>
+</Basis>

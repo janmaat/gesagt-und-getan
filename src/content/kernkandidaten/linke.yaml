@@ -1,0 +1,13 @@
+partij: linke
+gezaehlt: "Mindestens etwa 42 prüfbare Versprechen; nicht vollständig gezählt. Mehrere Kapitel haben keine Zwischenüberschriften und zählen ganz als Kapitelanfang. Die ersten zehn stehen fest."
+kandidaten:
+  - { nr: 1, citaat: "Deswegen wollen wir einen bundesweiten Mietendeckel durchsetzen.", pagina: 4, kapitel: "Einleitung" }
+  - { nr: 2, citaat: "Deshalb wollen wir die Mehrwertsteuer auf Grundnahrungsmittel abschaffen und die Marktmacht von großen Supermarktketten brechen.", pagina: 4, kapitel: "Einleitung", versprechen: linke-mehrwertsteuer-grundnahrungsmittel }
+  - { nr: 3, citaat: "Deshalb kämpfen wir weiter für eine echte Kindergrundsicherung.", pagina: 4, kapitel: "Einleitung" }
+  - { nr: 4, citaat: "Die Schuldenbremse muss weg und der Militärhaushalt muss sinken …", pagina: 4, kapitel: "Einleitung" }
+  - { nr: 5, citaat: "Wir schlagen eine Preisaufsicht und soziale Tarife für den Grundverbrauch bei Strom und Gas vor …", pagina: 6, kapitel: "1. Leben bezahlbar machen" }
+  - { nr: 6, citaat: "Wir wollen das Bürgergeld zu einer sanktionsfreien individuellen Mindestsicherung umbauen.", pagina: 15, kapitel: "4. Soziale Sicherheit für alle" }
+  - { nr: 7, citaat: "Mit einem Mindestlohn von mindestens 15 Euro – spätestens ab 2026 16 Euro – …", pagina: 15, kapitel: "4. Soziale Sicherheit für alle" }
+  - { nr: 8, citaat: "Wir setzen uns für eine solidarische Gesundheits- und Pflegeversicherung ein.", pagina: 18, kapitel: "5. Gesundheit und Pflege", hinweis: "Dazu: „Die Beitragsbemessungsgrenze fällt weg.“ und „Privatversicherte werden in die gesetzliche Krankenversicherung übernommen.“" }
+  - { nr: 9, citaat: "Unsere solidarische Gesundheitsversicherung soll evidenzbasiert alle medizinisch sinnvollen Leistungen wie Zahnersatz, Brillen und Ibuprofen abdecken …", pagina: 18, kapitel: "5. Gesundheit und Pflege" }
+  - { nr: 10, citaat: "Unsere solidarische Pflegevollversicherung soll alle pflegerischen Leistungen abdecken.", pagina: 18, kapitel: "5. Gesundheit und Pflege" }

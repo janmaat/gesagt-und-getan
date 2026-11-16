@@ -1,0 +1,15 @@
+partij: spd
+gezaehlt: "8 prüfbare Versprechen (dazu 4 Zweifelsfälle) aus Vorspann, Einleitungen der Teile und 25 Kapitelanfängen. Drei davon stehen in Kapitel 25, das keine Zwischenüberschriften hat."
+offen: Zählt das Schlusskapitel 25 als Kapitelanfang? Sollen Zweifelsfälle die Liste auffüllen?
+kandidaten:
+  - { nr: 1, citaat: "mit einem höheren Mindestlohn", pagina: 5, kapitel: "Worauf es jetzt ankommt", versprechen: spd-mindestlohn-15-euro }
+  - { nr: 2, citaat: "Entlastungen für Gering- und Normalverdiener bei der Einkommensteuer", pagina: 5, kapitel: "Worauf es jetzt ankommt" }
+  - { nr: 3, citaat: "weniger Mehrwertsteuer auf Lebensmittel", pagina: 5, kapitel: "Worauf es jetzt ankommt" }
+  - { nr: 4, citaat: "einem „Made in Germany“-Investitionsbonus für Zukunftsinvestitionen und sichere Arbeitsplätze", pagina: 5, kapitel: "Worauf es jetzt ankommt" }
+  - { nr: 5, citaat: "Wir stabilisieren die Renten", pagina: 5, kapitel: "Worauf es jetzt ankommt", zweifel: "Ohne Maß; konkret erst in Kapitel 8 unter einer Zwischenüberschrift." }
+  - { nr: 6, citaat: "Erleichterungen wie zum Beispiel eine Termingarantie beim Arzt", pagina: 20, kapitel: "Teil „Beschäftigte und ihre Familien entlasten“" }
+  - { nr: 7, citaat: "Wohnungslosigkeit wollen wir 2030 überwunden haben.", pagina: 20, kapitel: "6. Bezahlbares Zuhause" }
+  - { nr: 8, citaat: "Wir verhindern finanzielle Überforderung, begrenzen hohe Eigenanteile", pagina: 31, kapitel: "11. Pflege", zweifel: "Instrument genannt, aber ohne Maß." }
+  - { nr: 9, citaat: "werden wir auch Steuermittel maßvoll einsetzen", pagina: 31, kapitel: "11. Pflege", zweifel: "Prüfbar nur als „Steuergeld für die Pflegeversicherung: ja oder nein“." }
+  - { nr: 10, citaat: "dem soll der Spurwechsel in die Fachkräfteeinwanderung ermöglicht werden.", pagina: 54, kapitel: "20. Einwanderungsgesellschaft" }
+  - { nr: 11, citaat: "Einrichtung eines Deutschlandfonds", pagina: 66, kapitel: "25. Unser Versprechen" }

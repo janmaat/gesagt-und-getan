@@ -99,3 +99,13 @@ main { padding-bottom: 3rem; min-height: 60vh; }
 .quellen li { margin-bottom: 0.5rem; }
 dl.begriffe dt { font-weight: 700; margin-top: 1rem; }
 dl.begriffe dd { margin: 0.25rem 0 0; }
+.linie { white-space: nowrap; }
+/* Abstimmungen bewusst ohne Ampelfarben: eine Stimme ist weder gut noch schlecht. */
+.linie-ja, .linie-nein { font-weight: 600; }
+.linie-enthaltung, .linie-gemischt { font-style: italic; }
+.linie-keine { color: var(--text-leise); }
+.breite-gross { max-width: 68rem; }
+.nowrap { white-space: nowrap; }
+.code { background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius); padding: 0.6rem; overflow-x: auto; white-space: pre-wrap; word-break: break-all; font-size: 0.85rem; }
+details { margin: 1.5rem 0; }
+summary { cursor: pointer; color: var(--akzent); }

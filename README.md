@@ -22,7 +22,31 @@ npm run vorschau        # ontwikkelserver mét beloftes in onderzoek
 npm run build           # live-build: alleen beoordeelde én vrijgegeven beloftes
 npm run pruefen         # controleert dist/ op cookies, trackers, externe scripts
 npm run pruefen:live    # idem, en faalt bij lege Impressum-velden of een voorbeeldbuild
+npm run daten           # haalt open data op naar src/data/ (Abgeordnete, stemmingen, agenda, DIP, BGBl)
+npm run sprache         # taalcontrole van de gebouwde site met LanguageTool (na een build)
 ```
+
+## Open data (src/data/)
+
+| Bestand | Bron | Licentie / voorwaarden |
+|---|---|---|
+| `abgeordnete.json` | Sitzverteilung bundestag.de | bronvermelding |
+| `abstimmungen.json` | abgeordnetenwatch.de API v2 (namentliche Abstimmungen, stemmen per fractie) | CC0 1.0 |
+| `tagesordnung.json` | bundestag.de `conferenceWeekJSON` (niet gedocumenteerd, kan veranderen) | bronvermelding |
+| `dip.json` | DIP-API: verloop van wetten bij beloftes met een `dip`-nummer | gebruik toegestaan met bronvermelding |
+| `bgbl.json` | RSS van recht.bund.de (laatste 100 publicaties) | amtliche Werke |
+
+De workflow `.github/workflows/daten.yml` ververst deze bestanden elke maandag. Hij verandert nooit een
+beoordeling: statussen past alleen een mens aan. De DIP-sleutel is de openbare sleutel van de Bundestag
+(geldig tot eind mei 2027); zet een nieuwe in de omgevingsvariabele `DIP_API_KEY`.
+
+## Taalcontrole
+
+`npm run sprache` stuurt de tekst van alle eigen pagina's naar de openbare LanguageTool-API
+(max. 20 verzoeken per minuut; duurt een paar minuten) en schrijft `sprache-bericht.json`.
+Woorden die goed zijn maar die LanguageTool niet kent: `scripts/sprache-woerter.txt`.
+Pagina's met teksten van derden (titels van stemmingen, agenda) worden overgeslagen.
+LanguageTool vindt spelling en grammatica, geen stijl of toon: laat de teksten ook door een moedertaalspreker lezen.
 
 ## Regels die de code afdwingt
 
@@ -58,7 +82,9 @@ Duitse uitbreidingen:
 
 - De zes beloftes in `src/content/versprechen/` zijn **proefgevallen uit het onderzoek** (één per partij), allemaal `onderzoek`. Ze verschijnen alleen in de voorbeeldbuild.
 - Impressum, Datenschutz, Über uns en Kontakt hebben lege velden: vul `src/lib/betreiber.ts` in en laat de teksten juridisch nakijken vóór livegang.
-- Nog niet gebouwd (fase 2): DIP-signalen, Bundesgesetzblatt-RSS, namentliche Abstimmungen, agenda, Abgeordnete, „Sagen und Abstimmen“.
+- Per partij staat in `src/content/kernkandidaten/` de uitkomst van de kernregel uit het onderzoek (citaat + pagina). Alleen zichtbaar in de voorbeeldbuild, als werklijst.
+- Gebouwd uit fase 2: Abstimmungen, Abgeordnete, Diese Woche im Bundestag, Aktuell, Regierung Merz, Sagen und Abstimmen, Einfach erklärt, DIP-verloop op beloftepagina's, insluiten, RSS-feed (`/feed.xml`).
+- Nog niet: Stimmt das? (factchecks), Positionen erklärt, Nach Bundesland, Steckbrief, Rechner, Quiz.
 
 ## Licentie
 

@@ -1,0 +1,41 @@
+---
+import Basis from '../../layouts/Basis.astro';
+import { abstimmungen, FRAKTIONEN, linie, LINIE_LABEL } from '../../lib/offen';
+import { datumLang } from '../../lib/begriffe';
+export function getStaticPaths() {
+  return abstimmungen.abstimmungen.map((a) => ({ params: { id: String(a.id) }, props: { a } }));
+}
+const { a } = Astro.props;
+const pf = a.proFraktion as Record<string, { yes?: number; no?: number; abstain?: number; no_show?: number }>;
+const summe = (k: 'yes' | 'no' | 'abstain' | 'no_show') => Object.values(pf).reduce((n, s) => n + (s[k] ?? 0), 0);
+---
+<Basis titel={a.titel}>
+  <p class="meta"><a href="/abstimmungen/">Namentliche Abstimmungen</a> · {datumLang(a.datum)}</p>
+  <h1>{a.titel}</h1>
+  <p><strong>{a.angenommen ? 'Angenommen' : 'Abgelehnt'}</strong>: {summe('yes')} Ja, {summe('no')} Nein, {summe('abstain')} Enthaltungen, {summe('no_show')} nicht abgegeben.</p>
+  {a.einleitung && <p>{a.einleitung}</p>}
+  <p class="klein">Text: abgeordnetenwatch.de.</p>
+  <h2>Stimmen nach Fraktion</h2>
+  <div class="tabelle"><table>
+    <thead><tr><th>Fraktion</th><th>Ja</th><th>Nein</th><th>Enthaltung</th><th>nicht abgegeben</th><th>Mehrheit</th></tr></thead>
+    <tbody>
+      {FRAKTIONEN.map((f) => {
+        const s = pf[f.id] ?? {};
+        const l = linie(s);
+        return <tr><td>{f.name}</td><td>{s.yes ?? 0}</td><td>{s.no ?? 0}</td><td>{s.abstain ?? 0}</td><td>{s.no_show ?? 0}</td><td class={`linie linie-${l}`}>{LINIE_LABEL[l]}</td></tr>;
+      })}
+    </tbody>
+  </table></div>
+  {a.drucksachen.length > 0 && (
+    <>
+      <h2>Drucksachen</h2>
+      <ul>{a.drucksachen.map((d) => {
+        const [wp, nr] = d.split('/');
+        const n = nr.padStart(5, '0');
+        return <li><a href={`https://dserver.bundestag.de/btd/${wp}/${n.slice(0, 3)}/${wp}${n}.pdf`}>Drucksache {d}</a></li>;
+      })}</ul>
+    </>
+  )}
+  <h2>Quelle</h2>
+  <p><a href={a.quelle}>Diese Abstimmung bei abgeordnetenwatch.de</a>, mit der Stimme jedes Abgeordneten. Amtlich: <a href="https://www.bundestag.de/parlament/plenum/abstimmung/liste">Abstimmungslisten des Bundestags</a>.</p>
+</Basis>

@@ -12,7 +12,8 @@
     "pruefen": "node scripts/pruefe-dist.mjs",
     "pruefen:live": "node scripts/pruefe-dist.mjs --live",
     "test": "npm run build && npm run pruefen",
-    "sprache": "node scripts/sprache.mjs"
+    "sprache": "node scripts/sprache.mjs",
+    "daten": "node scripts/daten-holen.mjs"
   },
   "dependencies": {
     "astro": "5.18.2"

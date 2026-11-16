@@ -1,0 +1,28 @@
+---
+import Basis from '../../layouts/Basis.astro';
+import { abstimmungen, FRAKTIONEN, linie, LINIE_LABEL, type Stimmen } from '../../lib/offen';
+import { datumKurz, datumLang } from '../../lib/begriffe';
+const liste = abstimmungen.abstimmungen;
+const stimmenVon = (a: (typeof liste)[number], id: string): Stimmen | undefined => (a.proFraktion as Record<string, Stimmen>)[id];
+---
+<Basis titel="Abstimmungen" breit>
+  <h1>Namentliche Abstimmungen</h1>
+  <p>Bei einer namentlichen Abstimmung ist festgehalten, wie jeder einzelne Abgeordnete gestimmt hat. Im 21. Bundestag gab es bisher {liste.length}. Die meisten Beschlüsse fallen aber per Handzeichen; dann ist nur bekannt, wie die Fraktionen gestimmt haben. Diese Abstimmungen stehen bei den einzelnen <a href="/versprechen/">Versprechen</a>.</p>
+  <p class="klein">Die Tabelle zeigt, wie die Mehrheit jeder Fraktion gestimmt hat. „gemischt“ heißt: Keine Position hatte mehr als die Hälfte der abgegebenen Stimmen. Daten: <a href="https://www.abgeordnetenwatch.de/">abgeordnetenwatch.de</a> (CC0), Stand {datumLang(abstimmungen.stand)}.</p>
+  <div class="tabelle"><table>
+    <thead><tr><th>Datum</th><th>Abstimmung</th><th>Ergebnis</th>{FRAKTIONEN.map((f) => <th>{f.name}</th>)}</tr></thead>
+    <tbody>
+      {liste.map((a) => (
+        <tr>
+          <td class="nowrap">{datumKurz(a.datum)}</td>
+          <td><a href={`/abstimmungen/${a.id}/`}>{a.titel}</a></td>
+          <td>{a.angenommen ? 'angenommen' : 'abgelehnt'}</td>
+          {FRAKTIONEN.map((f) => {
+            const l = linie(stimmenVon(a, f.id));
+            return <td class={`linie linie-${l}`}>{LINIE_LABEL[l]}</td>;
+          })}
+        </tr>
+      ))}
+    </tbody>
+  </table></div>
+</Basis>

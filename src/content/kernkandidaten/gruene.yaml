@@ -1,0 +1,6 @@
+partij: gruene
+gezaehlt: "3 prüfbare Versprechen (dazu 5 Zweifelsfälle). Präambel und Kapitelanfänge sind als Fließtext geschrieben; die Maßnahmen stehen unter Zwischenüberschriften."
+kandidaten:
+  - { nr: 1, citaat: "Mit dem Deutschlandfonds werden wir in Bund, Ländern und Kommunen die notwendigen Mittel für die Investitionen in diese Zukunft mobilisieren.", pagina: 10, kapitel: "Präambel", versprechen: gruene-deutschlandfonds }
+  - { nr: 2, citaat: "Zu diesem Investitionsfonds schlagen wir einen „Pakt für ein modernes Deutschland“ vor – zu dem alle politischen Ebenen eingeladen sind: Bund, Länder und vor allem die Kommunen.", pagina: 10, kapitel: "Präambel" }
+  - { nr: 3, citaat: "… und eine realistische Strategie für bedarfsgerechten Wohnraum in Bestand und Neubau vorlegen.", pagina: 11, kapitel: "Präambel" }

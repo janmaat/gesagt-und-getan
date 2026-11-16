@@ -2,7 +2,9 @@
 import Basis from '../../layouts/Basis.astro';
 import Karte from '../../components/Karte.astro';
 import { parteien, versprechen, zaehle } from '../../lib/daten';
-import { STATUS_LABEL, STATUS_REIHENFOLGE } from '../../lib/begriffe';
+import { STATUS_LABEL, STATUS_REIHENFOLGE, zitat } from '../../lib/begriffe';
+import { getEntry } from 'astro:content';
+import { VORSCHAU } from '../../lib/daten';
 export async function getStaticPaths() {
   return (await parteien()).map((p) => ({ params: { id: p.id }, props: { p } }));
 }
@@ -10,6 +12,8 @@ const { p } = Astro.props;
 const eigene = (await versprechen()).filter((v) => v.data.partij.id === p.id);
 const kern = eigene.filter((v) => v.data.kern);
 const zahlen = zaehle(eigene);
+const kandidaten = VORSCHAU ? await getEntry('kernkandidaten', p.id) : undefined;
+const pdf = (seite: number, pdfSeite?: number) => `${p.data.programma.url}#page=${pdfSeite ?? seite + p.data.programma.paginaVerschuiving}`;
 ---
 <Basis titel={p.data.naam}>
   <h1>{p.data.naam}</h1>
@@ -26,6 +30,25 @@ const zahlen = zaehle(eigene);
   <h2>Kernversprechen</h2>
   <p class="klein">Höchstens zehn, nach einer festen Regel ausgewählt: die ersten prüfbaren Versprechen aus dem Vorspann und den Kapitelanfängen, in der Reihenfolge des Programms. <a href="/methode/#kernversprechen">Mehr zur Regel</a></p>
   {kern.length === 0 ? <p>Noch keine veröffentlicht.</p> : <ul class="karten">{kern.map((v) => <Karte v={v} />)}</ul>}
+
+  {kandidaten && (
+    <section class="hinweis">
+      <h2>Arbeitsliste: Ergebnis der Kernregel</h2>
+      <p class="klein">Nur in der Vorschau. Diese Liste muss ein Mensch prüfen, bevor daraus Kernversprechen werden.</p>
+      <p>{kandidaten.data.gezaehlt}</p>
+      {kandidaten.data.offen && <p><strong>Offen:</strong> {kandidaten.data.offen}</p>}
+      <ol>
+        {kandidaten.data.kandidaten.map((k) => (
+          <li value={k.nr}>
+            {zitat(k.citaat)} <span class="klein">(<a href={pdf(k.pagina, k.pdfPagina)}>S. {k.pagina}</a>, {k.kapitel})</span>
+            {k.zweifel && <span class="klein"> · Zweifelsfall: {k.zweifel}</span>}
+            {k.hinweis && <span class="klein"> · {k.hinweis}</span>}
+            {k.versprechen && <span class="klein"> · <a href={`/versprechen/${k.versprechen.id}/`}>bereits ausgearbeitet</a></span>}
+          </li>
+        ))}
+      </ol>
+    </section>
+  )}
 
   {eigene.length > kern.length && (
     <>

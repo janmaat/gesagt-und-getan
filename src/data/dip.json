@@ -1,0 +1,150 @@
+{
+  "stand": "2026-11-16",
+  "quelle": "DIP – Deutscher Bundestag/Bundesrat",
+  "vorgaenge": {
+    "322125": {
+      "titel": "Gesetz zur Änderung des Staatsangehörigkeitsgesetzes sowie weiterer Vorschriften",
+      "stand": "Verkündet",
+      "initiative": [
+        "Bundesregierung"
+      ],
+      "verkuendung": [
+        {
+          "datum": "2025-10-29",
+          "fundstelle": "BGBl I 2025, 256",
+          "url": "https://www.recht.bund.de/eli/bund/BGBl_1/2025/256"
+        }
+      ],
+      "inkrafttreten": [
+        {
+          "datum": "2025-10-30"
+        }
+      ],
+      "schritte": [
+        {
+          "datum": "2025-05-30",
+          "schritt": "Gesetzentwurf",
+          "organ": "BR",
+          "dokument": "220/25",
+          "url": "https://dserver.bundestag.de/brd/2025/0220-25.pdf",
+          "beschluss": []
+        },
+        {
+          "datum": "2025-06-23",
+          "schritt": "Gesetzentwurf",
+          "organ": "BT",
+          "dokument": "21/537",
+          "url": "https://dserver.bundestag.de/btd/21/005/2100537.pdf",
+          "beschluss": []
+        },
+        {
+          "datum": "2025-06-27",
+          "schritt": "1. Beratung",
+          "organ": "BT",
+          "dokument": "21/15",
+          "url": "https://dserver.bundestag.de/btp/21/21015.pdf#P.1392",
+          "beschluss": [
+            "Überweisung"
+          ]
+        },
+        {
+          "datum": "2025-06-30",
+          "schritt": "Empfehlungen der Ausschüsse",
+          "organ": "BR",
+          "dokument": "220/1/25",
+          "url": "https://dserver.bundestag.de/brd/2025/0220-1-25.pdf",
+          "beschluss": []
+        },
+        {
+          "datum": "2025-07-11",
+          "schritt": "1. Durchgang",
+          "organ": "BR",
+          "dokument": "1056",
+          "url": "https://dserver.bundestag.de/brp/1056.pdf#P.222",
+          "beschluss": [
+            "Stellungnahme: Änderungsvorschläge"
+          ]
+        },
+        {
+          "datum": "2025-07-11",
+          "schritt": "Beschlussdrucksache",
+          "organ": "BR",
+          "dokument": "220/25(B)",
+          "url": "https://dserver.bundestag.de/brd/2025/0220-25B.pdf",
+          "beschluss": []
+        },
+        {
+          "datum": "2025-08-27",
+          "schritt": "Unterrichtung über Stellungnahme des BR und Gegenäußerung der BRg",
+          "organ": "BT",
+          "dokument": "21/1373",
+          "url": "https://dserver.bundestag.de/btd/21/013/2101373.pdf",
+          "beschluss": []
+        },
+        {
+          "datum": "2025-09-11",
+          "schritt": "Nachträgliche Überweisung gemäß § 80 Geschäftsordnung BT",
+          "organ": "BT",
+          "dokument": "21/1628",
+          "url": "https://dserver.bundestag.de/btd/21/016/2101628.pdf",
+          "beschluss": []
+        },
+        {
+          "datum": "2025-09-15",
+          "schritt": "Beschlussempfehlung und Bericht",
+          "organ": "BT",
+          "dokument": "21/1634",
+          "url": "https://dserver.bundestag.de/btd/21/016/2101634.pdf",
+          "beschluss": []
+        },
+        {
+          "datum": "2025-10-08",
+          "schritt": "2. Beratung",
+          "organ": "BT",
+          "dokument": "21/30",
+          "url": "https://dserver.bundestag.de/btp/21/21030.pdf#P.3159",
+          "beschluss": [
+            "Annahme in Ausschussfassung"
+          ]
+        },
+        {
+          "datum": "2025-10-08",
+          "schritt": "3. Beratung",
+          "organ": "BT",
+          "dokument": "21/30",
+          "url": "https://dserver.bundestag.de/btp/21/21030.pdf#P.3166",
+          "beschluss": [
+            "Annahme in Ausschussfassung"
+          ]
+        },
+        {
+          "datum": "2025-10-10",
+          "schritt": "Unterrichtung über Gesetzesbeschluss des BT",
+          "organ": "BR",
+          "dokument": "545/25",
+          "url": "https://dserver.bundestag.de/brd/2025/0545-25.pdf",
+          "beschluss": []
+        },
+        {
+          "datum": "2025-10-17",
+          "schritt": "2. Durchgang",
+          "organ": "BR",
+          "dokument": "1058",
+          "url": "https://dserver.bundestag.de/brp/1058.pdf#P.365",
+          "beschluss": [
+            "kein Antrag auf Einberufung des Vermittlungsausschusses"
+          ]
+        },
+        {
+          "datum": "2025-10-17",
+          "schritt": "Beschlussdrucksache",
+          "organ": "BR",
+          "dokument": "545/25(B)",
+          "url": "https://dserver.bundestag.de/brd/2025/0545-25B.pdf",
+          "beschluss": []
+        }
+      ],
+      "quelle": "https://dip.bundestag.de/vorgang/322125"
+    }
+  }
+}

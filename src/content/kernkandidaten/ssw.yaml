@@ -1,0 +1,12 @@
+partij: ssw
+gezaehlt: "Mindestens 8 prüfbare Versprechen; die Kapitelanfänge ab Seite 22 sind noch nicht vollständig gelesen. Nr. 9 und 10 stehen noch nicht fest."
+offen: Kapitelanfänge ab Seite 22 lesen und Nr. 9 und 10 bestimmen.
+kandidaten:
+  - { nr: 1, citaat: "Wir wollen eine Aufnahme des Schutzes und der Förderung der Minderheiten ins Grundgesetz.", pagina: 6, kapitel: "Gute Minderheitenpolitik ist Friedenspolitik", versprechen: ssw-minderheiten-grundgesetz }
+  - { nr: 2, citaat: "Wir wollen, dass die Organisationen der Minderheiten eine angemessene institutionelle Förderung vom Bund bekommen statt der bisherigen Projektförderung.", pagina: 6, kapitel: "Gute Minderheitenpolitik ist Friedenspolitik" }
+  - { nr: 3, citaat: "Wir wollen, dass Dänisch und Friesisch analog Sorbisch in ihrem jeweiligen Siedlungsgebiet endlich als Gerichtssprachen anerkannt werden. Dazu muss § 184 des Gerichtsverfassungsgesetzes entsprechend geändert werden.", pagina: 6, kapitel: "Gute Minderheitenpolitik ist Friedenspolitik" }
+  - { nr: 4, citaat: "Wir wollen, dass die Minderheitensprachen bei der anstehenden Novellierung des Online-Zugangsgesetzes berücksichtigt werden.", pagina: 7, kapitel: "Gute Minderheitenpolitik ist Friedenspolitik" }
+  - { nr: 5, citaat: "Wir wollen, dass politische Stiftungen der nationalen Minderheiten und ihre Aufklärungsarbeit gleichberechtigt zu anderen politischen Stiftungen mit Bundesmitteln gefördert werden.", pagina: 7, kapitel: "Gute Minderheitenpolitik ist Friedenspolitik" }
+  - { nr: 6, citaat: "Wir wollen ein Verbandsklagerecht für nationale Minderheiten und Volksgruppen auf Bundesebene einführen …", pagina: 7, kapitel: "Gute Minderheitenpolitik ist Friedenspolitik" }
+  - { nr: 7, citaat: "Der Bund muss sich … dafür einsetzen, die Regelungen im Markenrecht so zu verschärfen, dass kein kommerzieller Markenschutz für in den jeweiligen Regional- und Minderheitensprachen gebräuchliche Begriffe erlangt werden kann.", pagina: 7, kapitel: "Gute Minderheitenpolitik ist Friedenspolitik" }
+  - { nr: 8, citaat: "Alle Bürger:innen sollen in die Sozialversicherungen einzahlen.", pagina: 8, kapitel: "Kein Sozialabbau" }

@@ -3,6 +3,7 @@ import Basis from '../../layouts/Basis.astro';
 import Status from '../../components/Status.astro';
 import { getEntry } from 'astro:content';
 import { versprechen, parteien } from '../../lib/daten';
+import { dip } from '../../lib/offen';
 import { AKKOORD_LABEL, GRUND_LABEL, QUELLE_LABEL, STATUS_ERKLAERUNG, STATUS_LABEL, THEMA_LABEL, datumLang, zitat } from '../../lib/begriffe';
 
 export async function getStaticPaths() {
@@ -16,6 +17,8 @@ const ps = await parteien();
 const name = (id: string) => ps.find((p) => p.id === id)?.data.kort ?? id;
 const programmUrl = `${partei.data.programma.url}#page=${d.programma.pdfPagina ?? (typeof d.programma.pagina === 'number' ? d.programma.pagina + partei.data.programma.paginaVerschuiving : 1)}`;
 const quelleAkkoord = d.bronnen.find((b) => b.soort === 'akkoord');
+const verfahren = d.dip ? dip.vorgaenge[d.dip] : undefined;
+const einbettCode = `<iframe src="https://gesagtundgetan.de/einbetten/versprechen/${v.id}/" width="360" height="170" style="border:0" loading="lazy" title="Gesagt und getan?"></iframe>`;
 ---
 <Basis titel={`${partei.data.kort}: ${d.titel}`} beschreibung={d.samenvatting}>
   <p class="meta"><a href={`/parteien/${partei.id}/`}>{partei.data.naam}</a> · <a href={`/themen/${d.thema}/`}>{THEMA_LABEL[d.thema]}</a>{d.kern && <span> · Kernversprechen</span>}</p>
@@ -48,6 +51,21 @@ const quelleAkkoord = d.bronnen.find((b) => b.soort === 'akkoord');
 
   <h2>Was ist passiert?</h2>
   <p>{d.toelichting}</p>
+
+  {verfahren && (
+    <>
+      <h2>Verfahren in Bundestag und Bundesrat</h2>
+      <p>{verfahren.titel}. Stand laut DIP: <strong>{verfahren.stand}</strong>.</p>
+      <ol class="quellen">
+        {verfahren.schritte.map((s) => (
+          <li>{datumLang(s.datum)} · {s.organ === 'BR' ? 'Bundesrat' : s.organ === 'BT' ? 'Bundestag' : s.organ}: {s.url ? <a href={s.url}>{s.schritt}</a> : s.schritt}{s.dokument && ` (${s.dokument})`}{s.beschluss.length > 0 && ` – ${s.beschluss.join('; ')}`}</li>
+        ))}
+        {verfahren.verkuendung.map((x) => <li>{datumLang(x.datum)} · Verkündung: <a href={x.url}>{x.fundstelle}</a></li>)}
+        {verfahren.inkrafttreten.map((x) => <li>{datumLang(x.datum)} · Inkrafttreten{x.erlaeuterung && ` (${x.erlaeuterung})`}</li>)}
+      </ol>
+      <p class="klein">Quelle: <a href={verfahren.quelle}>DIP – Deutscher Bundestag/Bundesrat</a>, abgerufen am {datumLang(dip.stand)}.</p>
+    </>
+  )}
 
   {d.waaromAnders && (
     <>
@@ -100,5 +118,10 @@ const quelleAkkoord = d.bronnen.find((b) => b.soort === 'akkoord');
       <ul>{d.geschiedenis.map((g) => <li>{datumLang(g.datum)}: {STATUS_LABEL[g.van]} → {STATUS_LABEL[g.naar]} ({g.bron})</li>)}</ul>
     </>
   )}
+  <details>
+    <summary>Diesen Status auf einer anderen Seite einbetten</summary>
+    <p class="klein">Der Kasten zeigt immer den aktuellen Status und verlinkt auf die Quellen. Er setzt keine Cookies.</p>
+    <pre class="code"><code>{einbettCode}</code></pre>
+  </details>
   <p class="klein">Fehler gefunden? <a href="/kontakt/">Schreiben Sie uns</a>. Korrekturen stehen auf der Seite <a href="/korrekturen/">Korrekturen</a>.</p>
 </Basis>

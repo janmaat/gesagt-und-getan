@@ -1,0 +1,906 @@
+{
+  "stand": "2026-11-16",
+  "quelle": "https://www.recht.bund.de/",
+  "eintraege": [
+    {
+      "titel": "Dritte Verordnung zur Gewährung einer außergewöhnlichen Anpassungsbeihilfe für Erzeuger in bestimmten Agrarsektoren",
+      "kurz": "Dritte Agrarerzeugeranpassungsbeihilfenverordnung",
+      "typ": "Verordnung",
+      "initiant": "Bundesministerium für Landwirtschaft, Ernährung und Heimat",
+      "fundstelle": "BGBl. 2026 I Nr. 337 vom 13.11.2026",
+      "datum": "2026-11-13",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/337"
+    },
+    {
+      "titel": "Bekanntmachung zu dem Übereinkommen über die gegenseitige Amtshilfe in Steuersachen in seiner geänderten Fassung",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 273 vom 12.11.2026",
+      "datum": "2026-11-12",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/273"
+    },
+    {
+      "titel": "Bekanntmachung über den Geltungsbereich des Übereinkommens vom 19. Juni 2023 im Rahmen des Seerechtsübereinkommens der Vereinten Nationen über die Erhaltung und nachhaltige Nutzung der biologischen Vielfalt der Meere von Gebieten außerhalb nationaler Hoheitsbefugnisse",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 272 vom 12.11.2026",
+      "datum": "2026-11-12",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/272"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-amerikanischen Vereinbarung über die Gewährung von Befreiungen und Vergünstigungen an das Unternehmen Global Shield Health Consultants, LLC (DOCPER-TC-114-10)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 271 vom 12.11.2026",
+      "datum": "2026-11-12",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/271"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-amerikanischen Vereinbarung über die Gewährung von Befreiungen und Vergünstigungen an das Unternehmen Global Shield Health Consultants, LLC (DOCPER-TC-114-09)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 270 vom 12.11.2026",
+      "datum": "2026-11-12",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/270"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-amerikanischen Vereinbarung über die Gewährung von Befreiungen und Vergünstigungen an das Unternehmen Global Shield Health Consultants, LLC (DOCPER-TC-114-08)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 269 vom 12.11.2026",
+      "datum": "2026-11-12",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/269"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-amerikanischen Vereinbarung über die Gewährung von Befreiungen und Vergünstigungen an das Unternehmen Global Shield Health Consultants, LLC (DOCPER-TC-114-07)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 268 vom 12.11.2026",
+      "datum": "2026-11-12",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/268"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-amerikanischen Vereinbarung über die Verlängerung der Gewährung von Befreiungen und Vergünstigungen an das Unternehmen Cherokee Nation Aerospace and Defense, LLC (DOCPER-TC-96-01)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 267 vom 12.11.2026",
+      "datum": "2026-11-12",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/267"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-amerikanischen Vereinbarung über die Gewährung von Befreiungen und Vergünstigungen an das Unternehmen Sterling Medical Associates, Inc. (DOCPER-TC-07-104)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 266 vom 12.11.2026",
+      "datum": "2026-11-12",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/266"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-amerikanischen Vereinbarung über die Gewährung von Befreiungen und Vergünstigungen an das Unternehmen ECS Federal, LLC (DOCPER-AS-175-03)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 265 vom 12.11.2026",
+      "datum": "2026-11-12",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/265"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-amerikanischen Vereinbarung über die Gewährung von Befreiungen und Vergünstigungen an das Unternehmen The Mission Essential Group, LLC (DOCPER-AS-126-25)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 264 vom 12.11.2026",
+      "datum": "2026-11-12",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/264"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-amerikanischen Vereinbarung über die Gewährung von Befreiungen und Vergünstigungen an das Unternehmen Booz Allen Hamilton, Inc. (DOCPER-AS-39-56)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 263 vom 12.11.2026",
+      "datum": "2026-11-12",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/263"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-amerikanischen Vereinbarung über die Gewährung von Befreiungen und Vergünstigungen an das Unternehmen Science Applications International Corporation (DOCPER-AS-11-45)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 262 vom 12.11.2026",
+      "datum": "2026-11-12",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/262"
+    },
+    {
+      "titel": "Verordnung zur Änderung der Verordnung über die Eignung der Ausbildungsstätte für die Berufsausbildung zum Landwirt und zur Landwirtin",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesministerium für Landwirtschaft, Ernährung und Heimat",
+      "fundstelle": "BGBl. 2026 I Nr. 336 vom 11.11.2026",
+      "datum": "2026-11-11",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/336"
+    },
+    {
+      "titel": "Zweite Verordnung zur Änderung der Akkreditierungsstellengebührenverordnung",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesministerium für Wirtschaft und Energie",
+      "fundstelle": "BGBl. 2026 I Nr. 335 vom 11.11.2026",
+      "datum": "2026-11-11",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/335"
+    },
+    {
+      "titel": "Siebte Verordnung zur Änderung der Pflegepersonaluntergrenzen-Verordnung",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesministerium für Gesundheit",
+      "fundstelle": "BGBl. 2026 I Nr. 334 vom 09.11.2026",
+      "datum": "2026-11-09",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/334"
+    },
+    {
+      "titel": "Verordnung zur Neuordnung der Verordnung über die Prüfung zu anerkannten Fortbildungsabschlüssen in der Finanzdienstleistungswirtschaft",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesministerium für Bildung, Familie, Senioren, Frauen und Jugend",
+      "fundstelle": "BGBl. 2026 I Nr. 333 vom 09.11.2026",
+      "datum": "2026-11-09",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/333"
+    },
+    {
+      "titel": "Erste Verordnung zur Änderung der Bilanzbuchhalter-Bachelor Professional in Bilanzbuchhaltung-Fortbildungsprüfungsverordnung",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesministerium für Bildung, Familie, Senioren, Frauen und Jugend",
+      "fundstelle": "BGBl. 2026 I Nr. 332 vom 09.11.2026",
+      "datum": "2026-11-09",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/332"
+    },
+    {
+      "titel": "Verordnung über die Festsetzung der Länderschlüsselzahlen und die Ermittlung der Schlüsselzahlen für die Aufteilung des Gemeindeanteils an der Umsatzsteuer nach § 5a des Gemeindefinanzreformgesetzes für die Jahre  2027, 2028 und 2029",
+      "kurz": "Umsatzsteuerschlüsselzahlenfestsetzungsverordnung",
+      "typ": "Verordnung",
+      "initiant": "Bundesministerium der Finanzen",
+      "fundstelle": "BGBl. 2026 I Nr. 331 vom 09.11.2026",
+      "datum": "2026-11-09",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/331"
+    },
+    {
+      "titel": "Verordnung zur Anpassung der Eisenbahn-Bau- und Betriebsordnung (§ 32 EBO)",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesministerium für Verkehr",
+      "fundstelle": "BGBl. 2026 I Nr. 330 vom 06.11.2026",
+      "datum": "2026-11-06",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/330"
+    },
+    {
+      "titel": "Erste Verordnung zur Änderung der Verordnung nach § 119 Absatz 4 des Seearbeitsgesetzes",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesministerium für Arbeit und Soziales",
+      "fundstelle": "BGBl. 2026 I Nr. 329 vom 06.11.2026",
+      "datum": "2026-11-06",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/329"
+    },
+    {
+      "titel": "Verordnung zur Neuordnung der Berufsausbildung zum Veranstaltungskaufmann und zur Veranstaltungskauffrau",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesministerium für Wirtschaft und Energie",
+      "fundstelle": "BGBl. 2026 I Nr. 328 vom 06.11.2026",
+      "datum": "2026-11-06",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/328"
+    },
+    {
+      "titel": "Bekanntmachung des deutsch-burkinischen Abkommens über Technische Zusammenarbeit",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung",
+      "fundstelle": "BGBl. 2026 II Nr. 261 vom 05.11.2026",
+      "datum": "2026-11-05",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/261"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-amerikanischen Vereinbarungen über die Gewährung von Befreiungen und Vergünstigungen an das Unternehmen KBR Wyle Services, LLC (DOCPER-TC-83-01)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 260 vom 05.11.2026",
+      "datum": "2026-11-05",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/260"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-amerikanischen Vereinbarung über die Fortgeltung von Befreiungen und Vergünstigungen an das Unternehmen Armed Forces Services Corporation unter dessen neuem Namen Magellan Federal, Inc. (DOCPER-TC-57-12)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 259 vom 05.11.2026",
+      "datum": "2026-11-05",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/259"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-amerikanischen Vereinbarung über die Verlängerung der Gewährung von Befreiungen und Vergünstigungen an das Unternehmen Cherokee Insights, LLC (DOCPER-AS-211-01)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 258 vom 05.11.2026",
+      "datum": "2026-11-05",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/258"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-amerikanischen Vereinbarungen über die Verlängerung der Gewährung von Befreiungen und Vergünstigungen an das Unternehmen CACI NSS, LLC (DOCPER-AS-151-04 und -05)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 257 vom 05.11.2026",
+      "datum": "2026-11-05",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/257"
+    },
+    {
+      "titel": "Bekanntmachung zu dem Internationalen Übereinkommen der Vereinten Nationen zur Bekämpfung der Finanzierung des Terrorismus",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 256 vom 04.11.2026",
+      "datum": "2026-11-04",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/256"
+    },
+    {
+      "titel": "Bekanntmachung über den Geltungsbereich der Änderung des Montrealer Protokolls über Stoffe, die zu einem Abbau der Ozonschicht führen",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 255 vom 04.11.2026",
+      "datum": "2026-11-04",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/255"
+    },
+    {
+      "titel": "Bekanntmachung über den Geltungsbereich des Protokolls von Nagoya über den Zugang zu genetischen Ressourcen und die ausgewogene und gerechte Aufteilung der sich aus ihrer Nutzung ergebenden Vorteile zum Übereinkommen über die biologische Vielfalt",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 254 vom 04.11.2026",
+      "datum": "2026-11-04",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/254"
+    },
+    {
+      "titel": "Bekanntmachung über den Geltungsbereich des Protokolls von Cartagena über die biologische Sicherheit zum Übereinkommen über die biologische Vielfalt",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 253 vom 04.11.2026",
+      "datum": "2026-11-04",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/253"
+    },
+    {
+      "titel": "Bekanntmachung über den Geltungsbereich des Übereinkommens zur Errichtung des Beratungszentrums für das Recht der WTO",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 252 vom 04.11.2026",
+      "datum": "2026-11-04",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/252"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-amerikanischen Vereinbarung über die Verlängerung der Gewährung von Befreiungen und Vergünstigungen an das Unternehmen Magellan Federal, Inc. (DOCPER-TC-109-01)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 251 vom 04.11.2026",
+      "datum": "2026-11-04",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/251"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-amerikanischen Vereinbarung über die Verlängerung der Gewährung von Befreiungen und Vergünstigungen an das Unternehmen LinkVisum Consulting Group, Inc. (DOCPER-TC-90-01)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 250 vom 04.11.2026",
+      "datum": "2026-11-04",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/250"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-amerikanischen Vereinbarung über die Verlängerung der Gewährung von Befreiungen und Vergünstigungen an das Unternehmen Sterling Medical Associates, Inc. (DOCPER-TC-07-81)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 249 vom 04.11.2026",
+      "datum": "2026-11-04",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/249"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-amerikanischen Vereinbarung über die Verlängerung der Gewährung von Befreiungen und Vergünstigungen an das Unternehmen QBASE, LLC (DOCPER-IT-39-02)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 248 vom 04.11.2026",
+      "datum": "2026-11-04",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/248"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-amerikanischen Vereinbarung über die Gewährung von Befreiungen und Vergünstigungen an das Unternehmen Accenture Federal Services, LLC (DOCPER-AS-223-01)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 247 vom 04.11.2026",
+      "datum": "2026-11-04",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/247"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-amerikanischen Vereinbarung über die Verlängerung der Gewährung von Befreiungen und Vergünstigungen an das Unternehmen Compass Point LLC (DOCPER-AS-179-01)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 246 vom 04.11.2026",
+      "datum": "2026-11-04",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/246"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-amerikanischen Vereinbarung über die Verlängerung der Gewährung von Befreiungen und Vergünstigungen an das Unternehmen Smartronix, LLC (DOCPER-AS-178-01)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 245 vom 04.11.2026",
+      "datum": "2026-11-04",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/245"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-amerikanischen Vereinbarung über die Fortgeltung von Befreiungen und Vergünstigungen an das Unternehmen Maxar Mission Solutions Inc. unter dessen neuem Namen Vantor Services Inc. (DOCPER-AS-173-01)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 244 vom 04.11.2026",
+      "datum": "2026-11-04",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/244"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-amerikanischen Vereinbarung über die Verlängerung der Gewährung von Befreiungen und Vergünstigungen an das Unternehmen Lukos, LLC (DOCPER-AS-172-01)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 243 vom 04.11.2026",
+      "datum": "2026-11-04",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/243"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-amerikanischen Vereinbarung über die Verlängerung der Gewährung von Befreiungen und Vergünstigungen an das Unternehmen Peraton Inc. (DOCPER-AS-168-02)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 242 vom 04.11.2026",
+      "datum": "2026-11-04",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/242"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-amerikanischen Vereinbarung über die Verlängerung der Gewährung von Befreiungen und Vergünstigungen an das Unternehmen Science Applications International Corporation (DOCPER-AS-113-05)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 241 vom 04.11.2026",
+      "datum": "2026-11-04",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/241"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-amerikanischen Vereinbarung über die Verlängerung der Gewährung von Befreiungen und Vergünstigungen an das Unternehmen Booz Allen Hamilton, Inc. (DOCPER-AS-39-47)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 240 vom 04.11.2026",
+      "datum": "2026-11-04",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/240"
+    },
+    {
+      "titel": "Berichtigung der Anordnung zur Übertragung beamtenrechtlicher Befugnisse des Bundeministeriums für Wohnen, Stadtentwicklung und Bauwesen auf das Bundesamt für Bauwesen und Raumordnung",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Bundesministerium für Wohnen, Stadtentwicklung und Bauwesen",
+      "fundstelle": "BGBl. 2026 I Nr. 327 vom 02.11.2026",
+      "datum": "2026-11-02",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/327"
+    },
+    {
+      "titel": "Verordnung zur Beschleunigung der Anerkennungsverfahren ausländischer Berufsqualifikationen in Heilberufen",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesministerium für Gesundheit",
+      "fundstelle": "BGBl. 2026 I Nr. 326 vom 30.10.2026",
+      "datum": "2026-10-30",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/326"
+    },
+    {
+      "titel": "Bekanntmachung über das Vorliegen der technischen Voraussetzungen für die Verarbeitung der Identifikationsnummer gemäß Artikel 22 Satz 3 des Registermodernisierungsgesetzes",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Bundesministerium für Digitales und Staatsmodernisierung",
+      "fundstelle": "BGBl. 2026 I Nr. 325 vom 29.10.2026",
+      "datum": "2026-10-29",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/325"
+    },
+    {
+      "titel": "Siebzehnte Verordnung zur Änderung der Sozialversicherungsentgeltverordnung",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesministerium für Arbeit und Soziales",
+      "fundstelle": "BGBl. 2026 I Nr. 324 vom 29.10.2026",
+      "datum": "2026-10-29",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/324"
+    },
+    {
+      "titel": "Bekanntmachung über den Geltungsbereich der Änderung des Montrealer Protokolls über Stoffe, die zu einem Abbau der Ozonschicht führen",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 239 vom 28.10.2026",
+      "datum": "2026-10-28",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/239"
+    },
+    {
+      "titel": "Bekanntmachung zu dem Übereinkommen des Europarats zur Verhütung des Terrorismus",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 238 vom 28.10.2026",
+      "datum": "2026-10-28",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/238"
+    },
+    {
+      "titel": "Bekanntmachung zu dem Internationalen Übereinkommen der Vereinten Nationen zur Bekämpfung der Finanzierung des Terrorismus",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 237 vom 28.10.2026",
+      "datum": "2026-10-28",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/237"
+    },
+    {
+      "titel": "Bekanntmachung der deutsch-libanesischen Vereinbarung zur Einrichtung örtlicher Büros der Deutschen Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH und der Kreditanstalt für Wiederaufbau (KfW)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung",
+      "fundstelle": "BGBl. 2026 II Nr. 236 vom 28.10.2026",
+      "datum": "2026-10-28",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/236"
+    },
+    {
+      "titel": "Verordnung zur Korrektur der Anweisung zur Aufnahme der Sprechfunkverbindung in \nDurchführungsverordnungen zur Luftverkehrs-Ordnung",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesaufsichtsamt für Flugsicherung",
+      "fundstelle": "BGBl. 2026 I Nr. 323 vom 28.10.2026",
+      "datum": "2026-10-28",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/323"
+    },
+    {
+      "titel": "Gesetz zur Modernisierung des Designrechts und zur Änderung des Gesetzes gegen den unlauteren Wettbewerb",
+      "kurz": "",
+      "typ": "Gesetz",
+      "initiant": "Bundesministerium der Justiz und für Verbraucherschutz",
+      "fundstelle": "BGBl. 2026 I Nr. 322 vom 27.10.2026",
+      "datum": "2026-10-27",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/322"
+    },
+    {
+      "titel": "Gesetz zur Modernisierung des Produkthaftungsrechts und zur Änderung weiterer Vorschriften",
+      "kurz": "",
+      "typ": "Gesetz",
+      "initiant": "Bundesministerium der Justiz und für Verbraucherschutz",
+      "fundstelle": "BGBl. 2026 I Nr. 321 vom 27.10.2026",
+      "datum": "2026-10-27",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/321"
+    },
+    {
+      "titel": "Gesetz zur Umsetzung der Richtlinie (EU) 2024/1260 über die Abschöpfung und Einziehung von Vermögenswerten",
+      "kurz": "",
+      "typ": "Gesetz",
+      "initiant": "Bundesministerium der Justiz und für Verbraucherschutz",
+      "fundstelle": "BGBl. 2026 I Nr. 320 vom 27.10.2026",
+      "datum": "2026-10-27",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/320"
+    },
+    {
+      "titel": "Erstes Gesetz zur Änderung des Wissenschaftsfreiheitsgesetzes",
+      "kurz": "",
+      "typ": "Gesetz",
+      "initiant": "Bundesministerium für Forschung, Technologie und Raumfahrt",
+      "fundstelle": "BGBl. 2026 I Nr. 319 vom 27.10.2026",
+      "datum": "2026-10-27",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/319"
+    },
+    {
+      "titel": "Gesetz zur Modernisierung des Bundespolizeigesetzes",
+      "kurz": "",
+      "typ": "Gesetz",
+      "initiant": "Bundesministerium des Innern",
+      "fundstelle": "BGBl. 2026 I Nr. 318 vom 27.10.2026",
+      "datum": "2026-10-27",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/318"
+    },
+    {
+      "titel": "Erste Verordnung zur Änderung der Zweihundertsechsundzwanzigsten Durchführungsverordnung zur Luftverkehrs-Ordnung (Festlegung von Flugverfahren für An- und Abflüge nach Instrumentenflugregeln zum und vom Verkehrslandeplatz Allendorf/Eder)",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesaufsichtsamt für Flugsicherung",
+      "fundstelle": "BGBl. 2026 I Nr. 317 vom 23.10.2026",
+      "datum": "2026-10-23",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/317"
+    },
+    {
+      "titel": "Bekanntmachung über das Inkrafttreten der Artikel 2, 4 und 7 des Fünften Gesetzes zur Änderung des Straßenverkehrsgesetzes und anderer straßenverkehrsrechtlicher Vorschriften",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Bundesministerium für Verkehr",
+      "fundstelle": "BGBl. 2026 I Nr. 316 vom 22.10.2026",
+      "datum": "2026-10-22",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/316"
+    },
+    {
+      "titel": "Bekanntmachung über das Inkrafttreten des Hochseeschutzgesetzes",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Bundesministerium für Umwelt, Klimaschutz, Naturschutz und nukleare Sicherheit",
+      "fundstelle": "BGBl. 2026 I Nr. 315 vom 22.10.2026",
+      "datum": "2026-10-22",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/315"
+    },
+    {
+      "titel": "Gesetz zur Änderung des Preisangabenrechts zur Sanktionierung von Verstößen gegen nationale und europäische Regelungen über Preisangaben",
+      "kurz": "",
+      "typ": "Gesetz",
+      "initiant": "Bundesministerium für Wirtschaft und Energie",
+      "fundstelle": "BGBl. 2026 I Nr. 314 vom 22.10.2026",
+      "datum": "2026-10-22",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/314"
+    },
+    {
+      "titel": "Bekanntmachung zu dem Übereinkommen über die gegenseitige Amtshilfe in Steuersachen in seiner geänderten Fassung",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 235 vom 22.10.2026",
+      "datum": "2026-10-22",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/235"
+    },
+    {
+      "titel": "Bekanntmachung über das Inkrafttreten des Übereinkommens vom 19. Juni 2023 im Rahmen des Seerechtsübereinkommens der Vereinten Nationen über die Erhaltung und nachhaltige Nutzung der biologischen Vielfalt der Meere von Gebieten außerhalb nationaler Hoheitsbefugnisse",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 234 vom 22.10.2026",
+      "datum": "2026-10-22",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/234"
+    },
+    {
+      "titel": "Sechste Verordnung zur Änderung der Achtundneunzigsten Durchführungsverordnung zur Luftverkehrs-Ordnung (Festlegung von Flugverfahren für Flüge nach Sichtflugregeln zum und vom Verkehrsflughafen Braunschweig)",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesaufsichtsamt für Flugsicherung",
+      "fundstelle": "BGBl. 2026 I Nr. 313 vom 21.10.2026",
+      "datum": "2026-10-21",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/313"
+    },
+    {
+      "titel": "Siebte Verordnung über die Freigabe von Vorräten des Erdölbevorratungsverbandes",
+      "kurz": "7. ErdölFrV",
+      "typ": "Verordnung",
+      "initiant": "Bundesministerium für Wirtschaft und Energie",
+      "fundstelle": "BGBl. 2026 I Nr. 312 vom 21.10.2026",
+      "datum": "2026-10-21",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/312"
+    },
+    {
+      "titel": "Verordnung zur Neuordnung über die Berufsausbildung zum Landwirt und zur Landwirtin",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesministerium für Landwirtschaft, Ernährung und Heimat",
+      "fundstelle": "BGBl. 2026 I Nr. 311 vom 21.10.2026",
+      "datum": "2026-10-21",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/311"
+    },
+    {
+      "titel": "Verordnung zur Neuregelung des Rechts über die Genehmigung und die Marktüberwachung von Kraftfahrzeugen und Kraftfahrzeuganhängern sowie von Teilen für diese Fahrzeuge",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesministerium für Verkehr",
+      "fundstelle": "BGBl. 2026 I Nr. 310 vom 21.10.2026",
+      "datum": "2026-10-21",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/310"
+    },
+    {
+      "titel": "Gesetz zur Änderung des Tabaksteuergesetzes",
+      "kurz": "",
+      "typ": "Gesetz",
+      "initiant": "Bundesministerium der Finanzen",
+      "fundstelle": "BGBl. 2026 I Nr. 309 vom 20.10.2026",
+      "datum": "2026-10-20",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/309"
+    },
+    {
+      "titel": "Gesetz zur Regelung der Förderung des Spitzensports und weiterer Maßnahmen gesamtstaatlicher Bedeutung im Sport sowie zur Errichtung der Spitzensport-Agentur",
+      "kurz": "Sportfördergesetz",
+      "typ": "Gesetz",
+      "initiant": "Bundeskanzleramt",
+      "fundstelle": "BGBl. 2026 I Nr. 308 vom 20.10.2026",
+      "datum": "2026-10-20",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/308"
+    },
+    {
+      "titel": "Gesetz zur Einführung eines antragslosen Kindergeldes",
+      "kurz": "",
+      "typ": "Gesetz",
+      "initiant": "Bundesministerium der Finanzen",
+      "fundstelle": "BGBl. 2026 I Nr. 307 vom 20.10.2026",
+      "datum": "2026-10-20",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/307"
+    },
+    {
+      "titel": "Verordnung zur Änderung der Integrationskurstestverordnung",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesministerium des Innern",
+      "fundstelle": "BGBl. 2026 I Nr. 306 vom 20.10.2026",
+      "datum": "2026-10-20",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/306"
+    },
+    {
+      "titel": "Verordnung zur Änderung der Vollstreckungspauschalen-Verordnung",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesministerium der Finanzen",
+      "fundstelle": "BGBl. 2026 I Nr. 305 vom 20.10.2026",
+      "datum": "2026-10-20",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/305"
+    },
+    {
+      "titel": "Gesetz zur Umsetzung der Richtlinie (EU) 2024/1785 zur Änderung der Richtlinie 2010/75/EU über Industrieemissionen",
+      "kurz": "",
+      "typ": "Gesetz",
+      "initiant": "Bundesministerium für Umwelt, Klimaschutz, Naturschutz und nukleare Sicherheit",
+      "fundstelle": "BGBl. 2026 I Nr. 304 vom 19.10.2026",
+      "datum": "2026-10-19",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/304"
+    },
+    {
+      "titel": "Fünfte Verordnung zur Änderung der Verordnung über die Zuweisungen an das Sondervermögen „Versorgungsfonds der Bundesagentur für Arbeit“",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesagentur für Arbeit",
+      "fundstelle": "BGBl. 2026 I Nr. 303 vom 19.10.2026",
+      "datum": "2026-10-19",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/303"
+    },
+    {
+      "titel": "Dritte Verordnung zur Änderung der EVPG-Verordnung",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesministerium für Wirtschaft und Energie",
+      "fundstelle": "BGBl. 2026 I Nr. 302 vom 19.10.2026",
+      "datum": "2026-10-19",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/302"
+    },
+    {
+      "titel": "Verordnung über die Ermittlung der Schlüsselzahlen für die Aufteilung des Gemeindeanteils an der Einkommensteuer für die Jahre 2027, 2028 und 2029",
+      "kurz": "Einkommensteuerschlüsselzahlenermittlungsverordnung",
+      "typ": "Verordnung",
+      "initiant": "Bundesministerium der Finanzen",
+      "fundstelle": "BGBl. 2026 I Nr. 301 vom 19.10.2026",
+      "datum": "2026-10-19",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/301"
+    },
+    {
+      "titel": "Dreiundzwanzigste Verordnung zur Änderung der Außenwirtschaftsverordnung",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesministerium für Wirtschaft und Energie",
+      "fundstelle": "BGBl. 2026 I Nr. 300 vom 16.10.2026",
+      "datum": "2026-10-16",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/300"
+    },
+    {
+      "titel": "Bekanntmachung der Änderung der zur Entgegennahme von Patent-, Gebrauchsmuster-, Marken- und Designanmeldungen befugten Patentinformationszentren",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Bundesministerium der Justiz und für Verbraucherschutz",
+      "fundstelle": "BGBl. 2026 I Nr. 299 vom 16.10.2026",
+      "datum": "2026-10-16",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/299"
+    },
+    {
+      "titel": "Siebte Verordnung zur Änderung der Zweihundertsechsunddreißigsten Durchführungsverordnung zur Luftverkehrs-Ordnung (Festlegung von Flugverfahren für An- und Abflüge nach Instrumentenflugregeln zum und vom Flughafen Barth)",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesaufsichtsamt für Flugsicherung",
+      "fundstelle": "BGBl. 2026 I Nr. 298 vom 16.10.2026",
+      "datum": "2026-10-16",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/298"
+    },
+    {
+      "titel": "Sechsundsechzigste Verordnung zur Änderung der Zweihundertfünfundfünfzigsten Durchführungsverordnung zur Luftverkehrs-Ordnung (Festlegung von Streckenführungen, Meldepunkten und Reiseflughöhen für Flüge nach Instrumentenflugregeln im kontrollierten Luftraum innerhalb der Bundesrepublik Deutschland)",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesaufsichtsamt für Flugsicherung",
+      "fundstelle": "BGBl. 2026 I Nr. 297 vom 15.10.2026",
+      "datum": "2026-10-15",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/297"
+    },
+    {
+      "titel": "Vierte Verordnung zur Änderung der Zweihundertsiebzehnten Durchführungsverordnung zur Luftverkehrs-Ordnung (Festlegung von Flugverfahren für An- und Abflüge nach Instrumentenflugregeln zum und vom Flughafen Hannover)",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesaufsichtsamt für Flugsicherung",
+      "fundstelle": "BGBl. 2026 I Nr. 296 vom 15.10.2026",
+      "datum": "2026-10-15",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/296"
+    },
+    {
+      "titel": "Siebte Verordnung zur Änderung der Sechsundneunzigsten Durchführungsverordnung zur Luftverkehrs-Ordnung (Festlegung von Flugverfahren für Flüge nach Sichtflugregeln am Verkehrsflughafen Paderborn-Lippstadt)",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesaufsichtsamt für Flugsicherung",
+      "fundstelle": "BGBl. 2026 I Nr. 295 vom 15.10.2026",
+      "datum": "2026-10-15",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/295"
+    },
+    {
+      "titel": "Bekanntmachung über den Geltungsbereich der Änderung des Montrealer Protokolls über Stoffe, die zu einem Abbau der Ozonschicht führen",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 233 vom 15.10.2026",
+      "datum": "2026-10-15",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/233"
+    },
+    {
+      "titel": "Bekanntmachung über den Geltungsbereich der Satzung der Internationalen Atomenergie-Organisation",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 232 vom 15.10.2026",
+      "datum": "2026-10-15",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/232"
+    },
+    {
+      "titel": "Verordnung zur Verwendung von Kommunikationshilfen für Personen mit Hör- oder Sprachbehinderung in Gerichtsverfahren",
+      "kurz": "Gerichtskommunikationshilfenverordnung",
+      "typ": "Verordnung",
+      "initiant": "Bundesministerium der Justiz und für Verbraucherschutz",
+      "fundstelle": "BGBl. 2026 I Nr. 294 vom 15.10.2026",
+      "datum": "2026-10-15",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/294"
+    },
+    {
+      "titel": "Bekanntmachung über den Geltungsbereich des Übereinkommens über die Weltorganisation für Meteorologie",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 231 vom 15.10.2026",
+      "datum": "2026-10-15",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/231"
+    },
+    {
+      "titel": "Bekanntmachung über den Geltungsbereich des Rotterdamer Übereinkommens über das Verfahren der vorherigen Zustimmung nach Inkenntnissetzung für bestimmte gefährliche Chemikalien sowie Pflanzenschutz- und Schädlingsbekämpfungsmittel im internationalen Handel",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 230 vom 15.10.2026",
+      "datum": "2026-10-15",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/230"
+    },
+    {
+      "titel": "Gesetz über den Zugang zu Schuldnerberatungsdiensten für Verbraucher",
+      "kurz": "Schuldnerberatungsdienstegesetz",
+      "typ": "Gesetz",
+      "initiant": "Bundesministerium der Justiz und für Verbraucherschutz",
+      "fundstelle": "BGBl. 2026 I Nr. 293 vom 15.10.2026",
+      "datum": "2026-10-15",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/293"
+    },
+    {
+      "titel": "Bekanntmachung über den Geltungsbereich des Römischen Statuts des Internationalen Strafgerichtshofs",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 229 vom 15.10.2026",
+      "datum": "2026-10-15",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/229"
+    },
+    {
+      "titel": "Verordnung zur Modernisierung der nationalen Umsetzung von europäischen Regelungen zum Ökodesign und zur Energieverbrauchskennzeichnung",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesministerium für Wirtschaft und Energie",
+      "fundstelle": "BGBl. 2026 I Nr. 292 vom 14.10.2026",
+      "datum": "2026-10-14",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/292"
+    },
+    {
+      "titel": "Dritte Verordnung zur Änderung der Marktstammdatenregisterverordnung",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesministerium für Wirtschaft und Energie",
+      "fundstelle": "BGBl. 2026 I Nr. 291 vom 14.10.2026",
+      "datum": "2026-10-14",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/291"
+    },
+    {
+      "titel": "Verordnung zur Neuordnung der Meisterprüfung im Print- und Medientechnologen-Handwerk",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesministerium für Wirtschaft und Energie",
+      "fundstelle": "BGBl. 2026 I Nr. 290 vom 14.10.2026",
+      "datum": "2026-10-14",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/290"
+    },
+    {
+      "titel": "Gesetz zur Stärkung des Innovations- und Wirtschaftsstandorts Deutschland durch Erprobungsfreiräume",
+      "kurz": "",
+      "typ": "Gesetz",
+      "initiant": "Bundesministerium für Wirtschaft und Energie",
+      "fundstelle": "BGBl. 2026 I Nr. 289 vom 09.10.2026",
+      "datum": "2026-10-09",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/289"
+    },
+    {
+      "titel": "Bekanntmachung über den Geltungsbereich der Satzung der Internationalen Organisation für erneuerbare Energien (IRENA)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 228 vom 08.10.2026",
+      "datum": "2026-10-08",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/228"
+    },
+    {
+      "titel": "Bekanntmachung über den Geltungsbereich des Wiener Übereinkommens über konsularische Beziehungen",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 227 vom 08.10.2026",
+      "datum": "2026-10-08",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/227"
+    },
+    {
+      "titel": "Bekanntmachung über den Geltungsbereich des Fakultativprotokolls zum Übereinkommen über die Sicherheit von Personal der Vereinten Nationen und beigeordnetem Personal",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 226 vom 08.10.2026",
+      "datum": "2026-10-08",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/226"
+    },
+    {
+      "titel": "Bekanntmachung über den Geltungsbereich des Übereinkommens über die Sicherheit von Personal der Vereinten Nationen und beigeordnetem Personal",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Auswärtiges Amt",
+      "fundstelle": "BGBl. 2026 II Nr. 225 vom 08.10.2026",
+      "datum": "2026-10-08",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-2/2026/225"
+    },
+    {
+      "titel": "Neunte Verordnung zur Änderung der Ukraine-Aufenthalts-Übergangsverordnung",
+      "kurz": "",
+      "typ": "Verordnung",
+      "initiant": "Bundesministerium des Innern",
+      "fundstelle": "BGBl. 2026 I Nr. 288 vom 08.10.2026",
+      "datum": "2026-10-08",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/288"
+    },
+    {
+      "titel": "Bekanntmachung zur Fortschreibung der Höhe der Mindestvergütung für Berufsausbildungen nach dem Berufsbildungsgesetz (2027)",
+      "kurz": "",
+      "typ": "Sonstiges",
+      "initiant": "Bundesministerium für Bildung, Familie, Senioren, Frauen und Jugend",
+      "fundstelle": "BGBl. 2026 I Nr. 287 vom 07.10.2026",
+      "datum": "2026-10-07",
+      "url": "https://www.recht.bund.de/eli/bund/bgbl-1/2026/287"
+    }
+  ]
+}
