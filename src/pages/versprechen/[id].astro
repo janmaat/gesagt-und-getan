@@ -3,7 +3,7 @@ import Basis from '../../layouts/Basis.astro';
 import Status from '../../components/Status.astro';
 import { getEntry } from 'astro:content';
 import { versprechen, parteien } from '../../lib/daten';
-import { AKKOORD_LABEL, GRUND_LABEL, QUELLE_LABEL, STATUS_ERKLAERUNG, STATUS_LABEL, THEMA_LABEL, datumLang } from '../../lib/begriffe';
+import { AKKOORD_LABEL, GRUND_LABEL, QUELLE_LABEL, STATUS_ERKLAERUNG, STATUS_LABEL, THEMA_LABEL, datumLang, zitat } from '../../lib/begriffe';
 
 export async function getStaticPaths() {
   const vs = await versprechen();
@@ -28,7 +28,7 @@ const quelleAkkoord = d.bronnen.find((b) => b.soort === 'akkoord');
   <p class="klein">{STATUS_ERKLAERUNG[d.statusVoorstel ?? d.status]} Wir messen am Wahlprogramm, nicht am Koalitionsvertrag. Stand: {datumLang(d.bijgewerkt)}.</p>
 
   <h2>Was steht im Wahlprogramm?</h2>
-  <blockquote>„{d.citaat}“</blockquote>
+  <blockquote>{zitat(d.citaat)}</blockquote>
   <p class="klein">Aus: <a href={programmUrl}>{partei.data.programma.titel}</a> ({partei.data.programma.jaar}), Seite {d.programma.pagina}{d.programma.pdfPagina && d.programma.pdfPagina !== d.programma.pagina ? ` (Seite ${d.programma.pdfPagina} im PDF)` : ''}, {d.programma.hoofdstuk}.</p>
   {d.kern && d.kernReden && <p class="klein"><a href="/methode/#kernversprechen">Kernversprechen</a>. {d.kernReden}</p>}
 
@@ -40,7 +40,7 @@ const quelleAkkoord = d.bronnen.find((b) => b.soort === 'akkoord');
   <ol class="kette">
     <li><span class="schritt">Programm</span><br />Versprochen, S. {d.programma.pagina}</li>
     <li><span class="schritt">Koalitionsvertrag</span><br />{AKKOORD_LABEL[d.akkoord.oordeel]}
-      {d.akkoord.citaat && <blockquote>„{d.akkoord.citaat}“</blockquote>}
+      {d.akkoord.citaat && <blockquote>{zitat(d.akkoord.citaat)}</blockquote>}
       {d.akkoord.zeile && <span class="klein">{quelleAkkoord ? <a href={quelleAkkoord.url}>Koalitionsvertrag</a> : 'Koalitionsvertrag'}, Zeile {d.akkoord.zeile}{d.akkoord.pagina && `, S. ${d.akkoord.pagina}`}</span>}
     </li>
     <li><span class="schritt">Umsetzung</span><br /><Status status={d.status} voorstel={d.statusVoorstel} /></li>
@@ -88,7 +88,7 @@ const quelleAkkoord = d.bronnen.find((b) => b.soort === 'akkoord');
     {d.bronnen.map((b) => (
       <li>
         <strong>{QUELLE_LABEL[b.soort]}:</strong> <a href={b.url}>{b.titel}</a>{b.datum && `, ${datumLang(b.datum)}`}.
-        {b.citaat && <> „{b.citaat}“</>}
+        {b.citaat && <> {zitat(b.citaat)}</>}
         <span class="klein"> Abgerufen am {datumLang(b.geraadpleegd)}.</span>
       </li>
     ))}

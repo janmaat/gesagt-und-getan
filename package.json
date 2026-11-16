@@ -11,7 +11,8 @@
     "build:vorschau": "ASTRO_TELEMETRY_DISABLED=1 PUBLIC_VORSCHAU=1 astro build && pagefind --site dist",
     "pruefen": "node scripts/pruefe-dist.mjs",
     "pruefen:live": "node scripts/pruefe-dist.mjs --live",
-    "test": "npm run build && npm run pruefen"
+    "test": "npm run build && npm run pruefen",
+    "sprache": "node scripts/sprache.mjs"
   },
   "dependencies": {
     "astro": "5.18.2"

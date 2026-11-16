@@ -105,3 +105,12 @@ export function datumLang(iso: string): string {
 export function zahl(n: number): string {
   return new Intl.NumberFormat('de-DE').format(n);
 }
+
+/**
+ * Setzt ein Zitat in deutsche Anführungszeichen. Anführungszeichen im Zitat werden zu einfachen:
+ * „Wir schaffen die ‚Turboeinbürgerung‘ ab.“
+ */
+export function zitat(text: string): string {
+  const innen = text.replace(/„/g, '‚').replace(/[“”]/g, '‘').replace(/"([^"]*)"/g, '‚$1‘');
+  return `„${innen}“`;
+}
